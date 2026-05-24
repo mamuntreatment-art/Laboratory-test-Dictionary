@@ -1,0 +1,5386 @@
+<!DOCTYPE html>
+<html 
+<head>
+    <title>Laboratory test Dictionary</title>
+    <style>
+
+              *{
+            margin:0;
+            padding:0;
+            box-sizing:border-box;
+            font-family:Arial, sans-serif;
+        }
+
+
+        /* HEADER */
+        header{
+            background:#122842;
+            color:#122842;
+            padding:20px 0;
+            position:sticky;
+            top:0;
+            z-index:999;
+        }
+
+
+        }
+
+        /* FOOTER */
+        footer{
+            background:#0f172a;
+            color:#fff;
+            text-align:center;
+            padding:25px 0;
+        }
+
+      
+
+
+
+
+
+
+ body {
+        font-family: Arial, sans-serif;
+        padding: 20px;
+        background-color: #f4f4f4;
+    }
+    h1 {
+        text-align: center;
+    }
+    #searchBox {
+        width: 100%;
+        padding: 10px;
+        margin-bottom: 20px;
+        font-size: 16px;
+        border: 1px solid #ccc;
+        border-radius: 10px;
+    }
+    table {
+        width: 100%;
+        border-collapse: collapse;
+        background-color: #fff;
+    }
+    th, td {
+        border: 1px solid #ccc;
+        padding: 6px;
+        text-align: left;
+    }
+    th {
+        background-color: #007BFF;
+        color: white;
+    }
+    tr:nth-child(even) {
+        background-color: #f2f2f2;
+    }
+
+
+
+ /* Developer info bar */
+  .dev-bar {
+    background: #122842;
+    color: #e6edf5;
+    font-size: 12.5px;
+    padding: 2px 250px;
+    text-align: center;
+    line-height: 1.4;
+    border-bottom: 1px solid #0b1a2c;
+
+  }
+  .dev-bar strong { color: #ffd980; }
+  .dev-bar span { margin: 0 6px; opacity: 0.85; }
+  .dev-bar a { color: #8ecbff; text-decoration: none; }
+  .dev-bar a:hover { text-decoration: underline; }
+
+
+
+ header {
+    background: #1e3a5f;
+    color: #fff;
+    padding: 2px 14px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 5px;
+  }
+  header h1 { margin: 0; font-size: 20px; }
+  header .actions { display: flex; gap: 8px; flex-wrap: wrap; }
+  button, .btn {
+    cursor: pointer;
+    border: none;
+    padding: 2px 40px;
+    border-radius: 4px;
+    background: #2a6ebb;
+    color: #fff;
+    font-size: 14px;
+    font-family: inherit;
+  }
+
+
+
+
+    </style>
+</head>
+<header>
+<!-- Developer info -->
+<div class="dev-bar">
+<strong>App Developer:</strong> MD MAMUN MIAH
+  <span>|</span> Medical Technologist
+  <span>|</span> Mob: <a href="tel:+8801854000045">01854000045</a>
+  <span>|</span> Email: <a href="mailto:md.mamun8@gmail.com">md.mamun8@gmail.com</a>
+<h1>Laboratory test Dictionary</h1>
+</div>
+<input type="text" id="searchBox" placeholder="Search for test name, department, specimen, date, price...">
+</header>
+<table id="labTable">
+    <thead>
+        <tr>
+            <th>SL</th>
+            <th>Department</th>
+            <th>Test Name</th>
+            <th>Specimen</th>
+            <th>DATE</th>
+            <th>Price</th>
+        </tr>
+    </thead>
+    <tbody>
+        <!-- Example row -->
+        <tr>
+            <td>1</td>
+            <td>Hematology</td>
+            <td>Complete Blood Count without ESR (CBC)</td>
+            <td>EDTA BLOOD</td>
+            <td>01 Day</td>
+            <td>250</td>
+        </tr>
+        <tr>
+            <td>2</td>
+            <td>Hematology</td>
+            <td>Complete Blood Count (CBC+ESR)</td>
+            <td>EDTA BLOOD</td>
+            <td>01 Day</td>
+            <td>275</td>
+        </tr>
+        <tr>
+            <td>3</td>
+            <td>Hematology</td>
+            <td>Bile Acid (B.Acid)</td>
+            <td>EDTA BLOOD</td>
+            <td>03 Day</td>
+            <td>2000</td>
+        </tr>
+        <tr>
+            <td>4</td>
+            <td>Hematology</td>
+            <td>Erythrocyte Sedimentation Rate (ESR)</td>
+            <td>EDTA BLOOD</td>
+            <td>01 Day</td>
+            <td>150</td>
+        </tr>
+        <tr>
+            <td>5</td>
+            <td>Hematology</td>
+            <td>Hemoglobin Electrophoresis(Hb Electro) (Capillary)</td>
+            <td>EDTA BLOOD</td>
+            <td>01 Day</td>
+            <td>800</td>
+        </tr>
+        <tr>
+            <td>6</td>
+            <td>Hematology</td>
+            <td>Hemoglobin Electrophoresis(Hb Electro) (HPLC)</td>
+            <td>EDTA BLOOD</td>
+            <td>01 Day</td>
+            <td>670</td>
+        </tr>
+        <tr>
+            <td>7</td>
+            <td>Hematology</td>
+            <td>Hemoglobin Percentage (HB%)</td>
+            <td>EDTA BLOOD</td>
+            <td>01 Day</td>
+            <td>200</td>
+        </tr>
+        <tr>
+            <td>8</td>
+            <td>Hematology</td>
+            <td>Malaria Parasite (MP)</td>
+            <td>EDTA BLOOD</td>
+            <td>01 Day</td>
+            <td>400</td>
+        </tr>
+        <tr>
+            <td>9</td>
+            <td>Hematology</td>
+            <td>Micro Filaria (Micro Filaria)</td>
+            <td>EDTA BLOOD</td>
+            <td>01 Day</td>
+            <td>500</td>
+        </tr>
+        <tr>
+            <td>10</td>
+            <td>Hematology</td>
+            <td>Peripheral Blood Film (PBF)</td>
+            <td>EDTA BLOOD</td>
+            <td>01 Day</td>
+            <td>200</td>
+        </tr>
+        <tr>
+            <td>11</td>
+            <td>Hematology</td>
+            <td>Platelet Count (Plt)</td>
+            <td>EDTA BLOOD</td>
+            <td>01 Day</td>
+            <td>200</td>
+        </tr>
+        <tr>
+            <td>12</td>
+            <td>Hematology</td>
+            <td>Reticulocyte Count (R Count)</td>
+            <td>EDTA BLOOD</td>
+            <td>02 Day</td>
+            <td>250</td>
+        </tr>
+        <tr>
+            <td>13</td>
+            <td>Hematology</td>
+            <td>Protein Electrophrosis (PE)</td>
+            <td>Serum+History</td>
+            <td>03 Day</td>
+            <td>1000</td>
+        </tr>
+        <tr>
+            <td>14</td>
+            <td>Hematology</td>
+            <td>Blood Grouping ABO & Rh(Bl. Gr.)</td>
+            <td>EDTA BLOOD</td>
+            <td>01 Day</td>
+            <td>150</td>
+        </tr>
+        <tr>
+            <td>15</td>
+            <td>Hematology</td>
+            <td>Immuno Electrophrosis (Immuno Electrop)</td>
+            <td>Serum+History</td>
+            <td>03 Day</td>
+            <td>4000</td>
+        </tr>
+        <tr>
+            <td>16</td>
+            <td>Hematology</td>
+            <td>Circulating Eosinophil Count (Eosino)</td>
+            <td>EDTA BLOOD</td>
+            <td>01 Day</td>
+            <td>175</td>
+        </tr>
+
+        <tr>
+            <td>17</td>
+            <td>Biochemistry</td>
+            <td>Acid Phosphate</td>
+            <td>Serum+Redtube</td>
+            <td>02 Day</td>
+            <td>600</td>
+        </tr>
+        <tr>
+            <td>18</td>
+            <td>Biochemistry</td>
+            <td>Alanine Aminotransferase(ALT - SGPT)</td>
+            <td>Serum+Redtube</td>
+            <td>Same Day</td>
+            <td>180</td>
+        </tr>
+        <tr>
+            <td>19</td>
+            <td>Biochemistry</td>
+            <td>Albumin (Alb)</td>
+            <td>Serum+Redtube</td>
+            <td>Same Day</td>
+            <td>150</td>
+        </tr>
+        <tr>
+            <td>20</td>
+            <td>Biochemistry</td>
+            <td>Albumin Globulin Ratio (A:G)</td>
+            <td>Serum+Redtube</td>
+            <td>Same Day</td>
+            <td>400</td>
+        </tr>
+        <tr>
+            <td>21</td>
+            <td>Biochemistry</td>
+            <td>Aldehyde test (Alde)</td>
+            <td>Serum+Redtube</td>
+            <td>03 Working Day's</td>
+            <td>1000</td>
+        </tr>
+        <tr>
+            <td>22</td>
+            <td>Biochemistry</td>
+            <td>Aldolase (ALDO)</td>
+            <td>Serum+Redtube</td>
+            <td>02 Day's</td>
+            <td>600</td>
+        </tr>
+        <tr>
+            <td>23</td>
+            <td>Biochemistry</td>
+            <td>Aldosterone (Aldos)</td>
+            <td>Serum+Redtube</td>
+            <td>5-7 Day's</td>
+            <td>4000</td>
+        </tr>
+        <tr>
+            <td>24</td>
+            <td>Biochemistry</td>
+            <td>Alkaline Phosphatase(ALP)</td>
+            <td>Serum+Redtube</td>
+            <td>Same Day</td>
+            <td>160</td>
+        </tr>
+        <tr>
+            <td>25</td>
+            <td>Biochemistry</td>
+            <td>ALPHA-1-ANTITRYPSIN QUANTITATION (Alpha-1)</td>
+            <td>Serum+Redtube</td>
+            <td>5-7 Day's</td>
+            <td>4000</td>
+        </tr>
+        <tr>
+            <td>26</td>
+            <td>Biochemistry</td>
+            <td>Anti Leptospira antibody (ALA)</td>
+            <td>Serum+Redtube</td>
+            <td>03 Day's</td>
+            <td>2000</td>
+        </tr>
+        <tr>
+            <td>27</td>
+            <td>Biochemistry</td>
+            <td>Anti Males Antibody (Males-Ab)</td>
+            <td>Serum+Redtube</td>
+            <td>03 Day's</td>
+            <td>2000</td>
+        </tr>
+        <tr>
+            <td>28</td>
+            <td>Biochemistry</td>
+            <td>ANTI SOLUBLE LIVER ANTIGEN (SLA)</td>
+            <td>Serum+Redtube</td>
+            <td>5-7 Day's</td>
+            <td>3000</td>
+        </tr>
+        <tr>
+            <td>29</td>
+            <td>Biochemistry</td>
+            <td>Anti Sperm Antibody (ASA)</td>
+            <td>Serum+Redtube</td>
+            <td>03 Day's</td>
+            <td>600</td>
+        </tr>
+        <tr>
+            <td>30</td>
+            <td>Biochemistry</td>
+            <td>Anti-Centromere Ab (Anti-Cenab)</td>
+            <td>Serum+Redtube</td>
+            <td>03 Day's</td>
+            <td>2500</td>
+        </tr>
+        <tr>
+            <td>31</td>
+            <td>Biochemistry</td>
+            <td>Anti-Mitochondial Ab (Mi2)</td>
+            <td>Serum+Redtube</td>
+            <td>03 Day's</td>
+            <td>1500</td>
+        </tr>
+        <tr>
+            <td>32</td>
+            <td>Biochemistry</td>
+            <td>Anti-Ovarian Antibody (Ovarian Ab)</td>
+            <td>Serum+Redtube</td>
+            <td>03 Day's</td>
+            <td>2200</td>
+        </tr>
+        <tr>
+            <td>33</td>
+            <td>Biochemistry</td>
+            <td>Anti-RNP Ab (Anti-RNP Ab)</td>
+            <td>Serum+Redtube</td>
+            <td>03 Day's</td>
+            <td>2500</td>
+        </tr>
+        <tr>
+            <td>34</td>
+            <td>Biochemistry</td>
+            <td>Anti-Saccharomyces Cerevisiae Antibody (ASCA)</td>
+            <td>Serum+Redtube</td>
+            <td>03 Day's</td>
+            <td>2500</td>
+        </tr>
+        <tr>
+            <td>35</td>
+            <td>Biochemistry</td>
+            <td>Anti-Scl-70/ Anti-Topoisomerase (Anti-Scl-70)</td>
+            <td>Serum+Redtube</td>
+            <td>03 Day's</td>
+            <td>2300</td>
+        </tr>
+        <tr>
+            <td>36</td>
+            <td>Biochemistry</td>
+            <td>Anti-Smith Antibody (Sm)</td>
+            <td>Serum+Redtube</td>
+            <td>03 Day's</td>
+            <td>2000</td>
+        </tr>
+<tr>
+    <td>37</td>
+    <td>Biochemistry</td>
+    <td>Anti-Sooth Muscle Ab (ASMA)</td>
+    <td>Serum/Red Tube</td>
+    <td>03 Day's</td>
+    <td>2200</td>
+</tr>
+<tr>
+    <td>38</td>
+    <td>Biochemistry</td>
+    <td>Anti-SSA (Ro)</td>
+    <td>Serum/Red Tube</td>
+    <td>03 Day's</td>
+    <td>1950</td>
+</tr>
+<tr>
+    <td>39</td>
+    <td>Biochemistry</td>
+    <td>Anti-SSB (La)</td>
+    <td>Serum/Red Tube</td>
+    <td>03 Day's</td>
+    <td>1950</td>
+</tr>
+<tr>
+    <td>40</td>
+    <td>Biochemistry</td>
+    <td>Antithrombin III (Thrombin III Ab)</td>
+    <td>Serum/Red Tube</td>
+    <td>03 Day's</td>
+    <td>4000</td>
+</tr>
+<tr>
+    <td>41</td>
+    <td>Biochemistry</td>
+    <td>Anti-U1 RNP Antibody (U1-RNP)</td>
+    <td>Serum/Red Tube</td>
+    <td>03 Day's</td>
+    <td>2500</td>
+</tr>
+<tr>
+    <td>42</td>
+    <td>Biochemistry</td>
+    <td>Ascites Albumin Gradient (SAAG)</td>
+    <td>Fluid + Serum</td>
+    <td>03 Day's</td>
+    <td>1500</td>
+</tr>
+<tr>
+    <td>43</td>
+    <td>Biochemistry</td>
+    <td>Ascitic fluid for ADA (Ascitic.ADA)</td>
+    <td>Fluid</td>
+    <td>Same Day</td>
+    <td>600</td>
+</tr>
+<tr>
+    <td>44</td>
+    <td>Biochemistry</td>
+    <td>Ascitic fluid for Albumin (Ascitic.Alb)</td>
+    <td>Fluid</td>
+    <td>Same Day</td>
+    <td>200</td>
+</tr>
+<tr>
+    <td>45</td>
+    <td>Biochemistry</td>
+    <td>Ascitic fluid for Amylase (Amy)</td>
+    <td>Fluid</td>
+    <td>Same Day</td>
+    <td>330</td>
+</tr>
+<tr>
+    <td>46</td>
+    <td>Biochemistry</td>
+    <td>Ascitic fluid for Biochemical Test (Ascitic.Bio)</td>
+    <td>Fluid</td>
+    <td>Same Day</td>
+    <td>350</td>
+</tr>
+<tr>
+    <td>47</td>
+    <td>Biochemistry</td>
+    <td>Ascitic fluid for Glucose (Ascitic.Gluc)</td>
+    <td>Fluid</td>
+    <td>Same Day</td>
+    <td>150</td>
+</tr>
+<tr>
+    <td>48</td>
+    <td>Biochemistry</td>
+    <td>Ascitic fluid for LDH (Ascitic.LDH)</td>
+    <td>Fluid</td>
+    <td>Same Day</td>
+    <td>400</td>
+</tr>
+<tr>
+    <td>49</td>
+    <td>Biochemistry</td>
+    <td>Ascitic fluid for Protein (As.Pro)</td>
+    <td>Fluid</td>
+    <td>Same Day</td>
+    <td>200</td>
+</tr>
+<tr>
+    <td>50</td>
+    <td>Biochemistry</td>
+    <td>Aspartate Aminotransferase(AST -SGOT)</td>
+    <td>Serum/Red Tube/ Gel-barrier tube</td>
+    <td>Same Day</td>
+    <td>180</td>
+</tr>
+<tr>
+    <td>51</td>
+    <td>Biochemistry</td>
+    <td>Aspirate Fluid For Biochemical (Bal For Bio)</td>
+    <td>Fluid</td>
+    <td>Same Day</td>
+    <td>350</td>
+</tr>
+<tr>
+    <td>52</td>
+    <td>Biochemistry</td>
+    <td>Aspirate Fluid For ADA (Asp ADA)</td>
+    <td>Fluid</td>
+    <td>Same Day</td>
+    <td>600</td>
+</tr>
+<tr>
+    <td>53</td>
+    <td>Biochemistry</td>
+    <td>Aspirate Fluid For Albumin (Bal For Alb)</td>
+    <td>Fluid</td>
+    <td>Same Day</td>
+    <td>200</td>
+</tr>
+<tr>
+    <td>54</td>
+    <td>Biochemistry</td>
+    <td>Aspirate Fluid For Glucose (Bal For Glu)</td>
+    <td>Fluid</td>
+    <td>Same Day</td>
+    <td>150</td>
+</tr>
+<tr>
+    <td>55</td>
+    <td>Biochemistry</td>
+    <td>Aspirate Fluid For Protein (Bal For Pro)</td>
+    <td>Fluid</td>
+    <td>Same Day</td>
+    <td>200</td>
+</tr>
+<tr>
+    <td>56</td>
+    <td>Biochemistry</td>
+    <td>Beta 2 Microglubulin (Beta 2 M)</td>
+    <td>Serum/Red Tube</td>
+    <td>03 Day's</td>
+    <td>600</td>
+</tr>
+<tr>
+    <td>57</td>
+    <td>Biochemistry</td>
+    <td>BETA-2 GLYCOPROTEIN 1 IgG (B2 GLY 1 IgG)</td>
+    <td>Serum/Red Tube</td>
+    <td>5-7 Day's</td>
+    <td>2000</td>
+</tr>
+<tr>
+    <td>58</td>
+    <td>Biochemistry</td>
+    <td>BETA-2 GLYCOPROTEIN 1 IgM (B2 GLY 1, IgM)</td>
+    <td>Serum/Red Tube</td>
+    <td>5-7 Day's</td>
+    <td>2000</td>
+</tr>
+<tr>
+    <td>59</td>
+    <td>Biochemistry</td>
+    <td>BETA-2 GLYCOPROTEIN 1, IgA (BETA-2-IgA)</td>
+    <td>Serum/Red Tube</td>
+    <td>5-7 Day's</td>
+    <td>2000</td>
+</tr>
+<tr>
+    <td>60</td>
+    <td>Biochemistry</td>
+    <td>Bile Acid (B.Acid)</td>
+    <td>Serum/Red Tube</td>
+    <td>03 Day's</td>
+    <td>2000</td>
+</tr>
+<tr>
+    <td>61</td>
+    <td>Biochemistry</td>
+    <td>Blood for ADA (Blood.ADA)</td>
+    <td>Serum/Red Tube</td>
+    <td>Same Day</td>
+    <td>600</td>
+</tr>
+<tr>
+    <td>62</td>
+    <td>Biochemistry</td>
+    <td>Blood Glucose (B.Gluc)</td>
+    <td>Plasma/Glucose Tube</td>
+    <td>Same Day</td>
+    <td>100</td>
+</tr>
+<tr>
+    <td>63</td>
+    <td>Biochemistry</td>
+    <td>Blood Osmolarity (Blood Osmo)</td>
+    <td>Serum + Glucose Tube</td>
+    <td>Same Day</td>
+    <td>500</td>
+</tr>
+<tr>
+    <td>64</td>
+    <td>Biochemistry</td>
+    <td>Blood Urea Nitrogen (BUN)</td>
+    <td>Serum/Red Tube</td>
+    <td>Same Day</td>
+    <td>170</td>
+</tr>
+<tr>
+    <td>65</td>
+    <td>Biochemistry</td>
+    <td>Bronchoalveolar lavage for Biochemical (Bal For Bio)</td>
+    <td>Fluid</td>
+    <td>Same Day</td>
+    <td>350</td>
+</tr>
+<tr>
+    <td>66</td>
+    <td>Biochemistry</td>
+    <td>Bronchoalveolar lavage for Glucose (Bal For Glu)</td>
+    <td>Fluid</td>
+    <td>Same Day</td>
+    <td>150</td>
+</tr>
+<tr>
+    <td>67</td>
+    <td>Biochemistry</td>
+    <td>Bronchoalveolar lavage for Protein (Bal For Pro)</td>
+    <td>Fluid</td>
+    <td>Same Day</td>
+    <td>200</td>
+</tr>
+<tr>
+    <td>68</td>
+    <td>Biochemistry</td>
+    <td>Bronchoalveolar lavage for ADA (Bal. ADA)</td>
+    <td>Fluid</td>
+    <td>Same Day</td>
+    <td>600</td>
+</tr>
+<tr>
+    <td>69</td>
+    <td>Biochemistry</td>
+    <td>Bronchoalveolar lavage for Albumin (Bal For Alb)</td>
+    <td>Fluid</td>
+    <td>Same Day</td>
+    <td>200</td>
+</tr>
+<tr>
+    <td>70</td>
+    <td>Biochemistry</td>
+    <td>C- Peptide (C-pep)</td>
+    <td>Serum/Red Tube</td>
+    <td>03 Day's</td>
+    <td>1200</td>
+</tr>
+<tr>
+    <td>71</td>
+    <td>Biochemistry</td>
+    <td>C.S.F Albumin (C.S.F.Alb)</td>
+    <td>Fluid</td>
+    <td>Same Day</td>
+    <td>200</td>
+</tr>
+<tr>
+    <td>72</td>
+    <td>Biochemistry</td>
+    <td>C.S.F for ADA (C.S.F ADA)</td>
+    <td>Fluid</td>
+    <td>Same Day</td>
+    <td>600</td>
+</tr>
+<tr>
+    <td>73</td>
+    <td>Biochemistry</td>
+    <td>C.S.F LDH (C.S.F.LDH)</td>
+    <td>Fluid</td>
+    <td>Same Day</td>
+    <td>400</td>
+</tr>
+<tr>
+    <td>74</td>
+    <td>Biochemistry</td>
+    <td>Cerebrospinal fluid for ADA (Cerebrospinal ADA)</td>
+    <td>Fluid</td>
+    <td>Same Day</td>
+    <td>600</td>
+</tr>
+<tr>
+    <td>75</td>
+    <td>Biochemistry</td>
+    <td>Cerebrospinal fluid for Biochemical Test (C.S.F. Bio)</td>
+    <td>Fluid</td>
+    <td>Same Day</td>
+    <td>350</td>
+</tr>
+<tr>
+    <td>76</td>
+    <td>Biochemistry</td>
+    <td>Cerebrospinal fluid for Glucose (C.S.F Gluc)</td>
+    <td>Fluid</td>
+    <td>Same Day</td>
+    <td>150</td>
+</tr>
+<tr>
+    <td>77</td>
+    <td>Biochemistry</td>
+    <td>Cerebrospinal fluid for Protein (C.S.F Pro)</td>
+    <td>Fluid</td>
+    <td>Same Day</td>
+    <td>200</td>
+</tr>
+<tr>
+    <td>78</td>
+    <td>Biochemistry</td>
+    <td>Ceruloplasmin (Ceruloplasmin)</td>
+    <td>Serum/Red Tube</td>
+    <td>02 Day's</td>
+    <td>1500</td>
+</tr>
+<tr>
+    <td>79</td>
+    <td>Biochemistry</td>
+    <td>Cervical Fluid For ADA (Cer. ADA)</td>
+    <td>Fluid</td>
+    <td>Same Day</td>
+    <td>600</td>
+</tr>
+<tr>
+    <td>80</td>
+    <td>Biochemistry</td>
+    <td>Citric Acid (C.Acid)</td>
+    <td>Serum/Red Tube</td>
+    <td>03 Day's</td>
+    <td>1500</td>
+</tr>
+<tr>
+    <td>81</td>
+    <td>Biochemistry</td>
+    <td>Corresponding Urine Sugar 2hour (CUS)</td>
+    <td>Urine+ Flasma</td>
+    <td>Same Day</td>
+    <td>100</td>
+</tr>
+<tr>
+    <td>82</td>
+    <td>Biochemistry</td>
+    <td>C-Reactive Protein (CRP)</td>
+    <td>Serum/Red Tube</td>
+    <td>Same Day</td>
+    <td>375</td>
+</tr>
+<tr>
+    <td>83</td>
+    <td>Biochemistry</td>
+    <td>Creatine Kinase-MB(CK-MB)</td>
+    <td>Serum/Red Tube</td>
+    <td>Same Day</td>
+    <td>500</td>
+</tr>
+<tr>
+    <td>84</td>
+    <td>Biochemistry</td>
+    <td>Creatine Phosphokinase(CPK)</td>
+    <td>Serum/Red Tube</td>
+    <td>Same Day</td>
+    <td>400</td>
+</tr>
+<tr>
+    <td>85</td>
+    <td>Biochemistry</td>
+    <td>Creatinine Clearance Rate(CCR)</td>
+    <td>Serum +Urine 24 Hrs Vol.</td>
+    <td>Same Day</td>
+    <td>400</td>
+</tr>
+
+<tr>
+    <td>86</td>
+    <td>Biochemistry</td>
+    <td>CSF - Electrolyte(CSF.Elec)</td>
+    <td>Fluid</td>
+    <td>Same Day</td>
+    <td>450</td>
+</tr>
+<tr>
+    <td>87</td>
+    <td>Biochemistry</td>
+    <td>CSF for Biochemical tests (CSFBT)</td>
+    <td>Fluid</td>
+    <td>Same Day</td>
+    <td>350</td>
+</tr>
+<tr>
+    <td>88</td>
+    <td>Biochemistry</td>
+    <td>Cystic Fluid For ADA (Cystic ADA)</td>
+    <td>Fluid</td>
+    <td>Same Day</td>
+    <td>600</td>
+</tr>
+<tr>
+    <td>89</td>
+    <td>Biochemistry</td>
+    <td>Cystic Fluid For Albumin (Cystic Alb)</td>
+    <td>Fluid</td>
+    <td>Same Day</td>
+    <td>200</td>
+</tr>
+<tr>
+    <td>90</td>
+    <td>Biochemistry</td>
+    <td>Cystic fluid for Amylase (Cystic Amylase)</td>
+    <td>Fluid</td>
+    <td>Same Day</td>
+    <td>450</td>
+</tr>
+<tr>
+    <td>91</td>
+    <td>Biochemistry</td>
+    <td>Cystic Fluid For Biochemical (Cystic Bio)</td>
+    <td>Fluid</td>
+    <td>Same Day</td>
+    <td>350</td>
+</tr>
+<tr>
+    <td>92</td>
+    <td>Biochemistry</td>
+    <td>Cystic Fluid For Glucose (Cystic Glu)</td>
+    <td>Fluid</td>
+    <td>Same Day</td>
+    <td>150</td>
+</tr>
+<tr>
+    <td>93</td>
+    <td>Biochemistry</td>
+    <td>Cystic Fluid For Protein (Cystic Pro)</td>
+    <td>Fluid</td>
+    <td>Same Day</td>
+    <td>200</td>
+</tr>
+<tr>
+    <td>94</td>
+    <td>Biochemistry</td>
+    <td>Dehydroepiandrosterone sulfate (DHEA-SO4)</td>
+    <td>Serum/Red Tube</td>
+    <td>02 Day's</td>
+    <td>600</td>
+</tr>
+<tr>
+    <td>95</td>
+    <td>Biochemistry</td>
+    <td>Digoxin (Digo)</td>
+    <td>Serum/Red Tube</td>
+    <td>02 Day's</td>
+    <td>650</td>
+</tr>
+<tr>
+    <td>96</td>
+    <td>Biochemistry</td>
+    <td>Dihydrotestosterone (DHT)</td>
+    <td>Serum/Red Tube</td>
+    <td>05 Day's</td>
+    <td>2000</td>
+</tr>
+<tr>
+    <td>97</td>
+    <td>Biochemistry</td>
+    <td>Direct Bilirubin(D.Bili)</td>
+    <td>Serum/Red Tube/ Gel-barrier tube protect form light.</td>
+    <td>Same Day</td>
+    <td>200</td>
+</tr>
+<tr>
+    <td>98</td>
+    <td>Biochemistry</td>
+    <td>Drain Fluid For amylase( Drain For Amy)</td>
+    <td>Fluid</td>
+    <td>Same Day</td>
+    <td>450</td>
+</tr>
+<tr>
+    <td>99</td>
+    <td>Biochemistry</td>
+    <td>Drain Fluid For Biochemical( Drain For Bio)</td>
+    <td>Fluid</td>
+    <td>Same Day</td>
+    <td>350</td>
+</tr>
+<tr>
+    <td>100</td>
+    <td>Biochemistry</td>
+    <td>Electrolytes with bicarbonate(Ele-HCO3)</td>
+    <td>Sorium Heparin Tube</td>
+    <td>Same Day</td>
+    <td>450</td>
+</tr>
+<tr>
+    <td>101</td>
+    <td>Biochemistry</td>
+    <td>Estimated Glomerular Filtration Rate(eGFR)</td>
+    <td>Serum/Red Tube</td>
+    <td>Same Day</td>
+    <td>400</td>
+</tr>
+<tr>
+    <td>102</td>
+    <td>Biochemistry</td>
+    <td>Gamma-Glutamyl Transferase(GGT)</td>
+    <td>Serum/Red Tube</td>
+    <td>Same Day</td>
+    <td>350</td>
+</tr>
+<tr>
+    <td>103</td>
+    <td>Biochemistry</td>
+    <td>Globulin(GLB)</td>
+    <td>Serum/Red Tube</td>
+    <td>Same Day</td>
+    <td>300</td>
+</tr>
+<tr>
+    <td>104</td>
+    <td>Biochemistry</td>
+    <td>Glucose (1 Hour After Breakfast) (BS1hrABF)</td>
+    <td>Plasma/Glucose Tube</td>
+    <td>Same Day</td>
+    <td>100</td>
+</tr>
+<tr>
+    <td>105</td>
+    <td>Biochemistry</td>
+    <td>Glucose (2 Hours After Breakfast) (BS2hrABF)</td>
+    <td>Plasma/Glucose Tube</td>
+    <td>Same Day</td>
+    <td>100</td>
+</tr>
+<tr>
+    <td>106</td>
+    <td>Biochemistry</td>
+    <td>Glucose (2 Hours After Dinner) (PPBS2hrAD)</td>
+    <td>Plasma/Glucose Tube</td>
+    <td>Same Day</td>
+    <td>100</td>
+</tr>
+<tr>
+    <td>107</td>
+    <td>Biochemistry</td>
+    <td>Glucose (2 Hours After Lunch) (PPBS2hrAL)</td>
+    <td>Plasma/Glucose Tube</td>
+    <td>Same Day</td>
+    <td>100</td>
+</tr>
+<tr>
+    <td>108</td>
+    <td>Biochemistry</td>
+    <td>Glucose (Fasting) with Corresponding Urine Sugar(GCUS)</td>
+    <td>Plasma/Glucose Tube</td>
+    <td>Same Day</td>
+    <td>150</td>
+</tr>
+<tr>
+    <td>109</td>
+    <td>Biochemistry</td>
+    <td>Glucose (Gluc)</td>
+    <td>Plasma/Glucose Tube</td>
+    <td>Same Day</td>
+    <td>150</td>
+</tr>
+<tr>
+    <td>110</td>
+    <td>Biochemistry</td>
+    <td>Glucose (Random) (RBS)</td>
+    <td>Plasma/Glucose Tube</td>
+    <td>Same Day</td>
+    <td>100</td>
+</tr>
+<tr>
+    <td>111</td>
+    <td>Biochemistry</td>
+    <td>Glucose (RBS) with Corresponding Urine Sugar(GCUS)</td>
+    <td>Urine + Glucose</td>
+    <td>Same Day</td>
+    <td>150</td>
+</tr>
+<tr>
+    <td>112</td>
+    <td>Biochemistry</td>
+    <td>Glucose 1 Hours After Breakfast with Corresponding Urine Sugar ( 1 Hrs ABF With CUS)</td>
+    <td>Urine + Glucose</td>
+    <td>Same Day</td>
+    <td>150</td>
+</tr>
+<tr>
+    <td>113</td>
+    <td>Biochemistry</td>
+    <td>Glucose 1 Hours After Breakfast with Corresponding Urine Sugar ( 1 Hrs ABF With CUS)</td>
+    <td>Urine + Glucose</td>
+    <td>Same Day</td>
+    <td>50</td>
+</tr>
+<tr>
+    <td>114</td>
+    <td>Biochemistry</td>
+    <td>Glucose 2 Hours After 75gm Glucose (BS2hrAG)</td>
+    <td>Plasma/Glucose Tube</td>
+    <td>Same Day</td>
+    <td>100</td>
+</tr>
+<tr>
+    <td>115</td>
+    <td>Biochemistry</td>
+    <td>Glucose 2 Hours After Breakfast with Corresponding Urine Sugar ( 2 Hrs ABF With CUS)</td>
+    <td>Urine + Glucose</td>
+    <td>Same Day</td>
+    <td>150</td>
+</tr>
+<tr>
+    <td>116</td>
+    <td>Biochemistry</td>
+    <td>Glucose 2hrs after 75 gm with Corresponding Urine Sugar ( 2 Hrs 75 With CUS)</td>
+    <td>Urine + Glucose</td>
+    <td>Same Day</td>
+    <td>150</td>
+</tr>
+<tr>
+    <td>117</td>
+    <td>Biochemistry</td>
+    <td>Glucose Fasting (FBS)</td>
+    <td>Plasma/Glucose Tube</td>
+    <td>Same Day</td>
+    <td>100</td>
+</tr>
+<tr>
+    <td>118</td>
+    <td>Biochemistry</td>
+    <td>Glucose Tolerance Test (2 sample) (GTT)</td>
+    <td>Plasma/Glucose Tube</td>
+    <td>Same Day</td>
+    <td>200</td>
+</tr>
+<tr>
+    <td>119</td>
+    <td>Biochemistry</td>
+    <td>Glucose-6-Phosphate Dehydrogenase (G6PD)</td>
+    <td>Plasma/Glucose Tube + Whole Blood</td>
+    <td>03 Day's</td>
+    <td>2700</td>
+</tr>
+<tr>
+    <td>120</td>
+    <td>Biochemistry</td>
+    <td>HDL-Cholesterol(HDL)</td>
+    <td>Serum/Red Tube</td>
+    <td>Same Day</td>
+    <td>200</td>
+</tr>
+<tr>
+    <td>121</td>
+    <td>Biochemistry</td>
+    <td>Hemoglobin-A1c (HbA1C)</td>
+    <td>Whole Blood/Levender Tube</td>
+    <td>Same Day</td>
+    <td>490</td>
+</tr>
+<tr>
+    <td>122</td>
+    <td>Biochemistry</td>
+    <td>Homeostatic Model Assessment-Insulin Resistance (HOMA-IR)</td>
+    <td>Serum + Plasma</td>
+    <td>Sun/Tue/Thu</td>
+    <td>1500</td>
+</tr>
+<tr>
+    <td>123</td>
+    <td>Biochemistry</td>
+    <td>Homocystine</td>
+    <td>Serum/Red Tube</td>
+    <td>03 Day's</td>
+    <td>2000</td>
+</tr>
+<tr>
+    <td>124</td>
+    <td>Biochemistry</td>
+    <td>Iron Profile (Fe Profile)</td>
+    <td>Serum/Red Tube</td>
+    <td>Same Day</td>
+    <td>1200</td>
+</tr>
+<tr>
+    <td>125</td>
+    <td>Biochemistry</td>
+    <td>Joint Fluid for ADA (Join. ADA)</td>
+    <td>Fluid</td>
+    <td>Same Day</td>
+    <td>600</td>
+</tr>
+<tr>
+    <td>126</td>
+    <td>Biochemistry</td>
+    <td>Joint Fluid for Albumin (Join. Alb)</td>
+    <td>Fluid</td>
+    <td>Same Day</td>
+    <td>200</td>
+</tr>
+<tr>
+    <td>127</td>
+    <td>Biochemistry</td>
+    <td>Joint Fluid for Biochemical Test (Joint.Biochem)</td>
+    <td>Fluid</td>
+    <td>Same Day</td>
+    <td>350</td>
+</tr>
+<tr>
+    <td>128</td>
+    <td>Biochemistry</td>
+    <td>Joint Fluid for Glucose (Join. glu)</td>
+    <td>Fluid</td>
+    <td>Same Day</td>
+    <td>150</td>
+</tr>
+<tr>
+    <td>129</td>
+    <td>Biochemistry</td>
+    <td>Joint Fluid for LDH (Join. LDH)</td>
+    <td>Fluid</td>
+    <td>Same Day</td>
+    <td>400</td>
+</tr>
+<tr>
+    <td>130</td>
+    <td>Biochemistry</td>
+    <td>Joint Fluid for Protein (Join.Pro)</td>
+    <td>Fluid</td>
+    <td>Same Day</td>
+    <td>200</td>
+</tr>
+<tr>
+    <td>131</td>
+    <td>Biochemistry</td>
+    <td>Lactate</td>
+    <td>Whole Blood + Glucose Tube</td>
+    <td>02 Day's</td>
+    <td>1000</td>
+</tr>
+<tr>
+    <td>132</td>
+    <td>Biochemistry</td>
+    <td>Lactate Dehydrogenase (LDH)</td>
+    <td>Serum/Red Tube</td>
+    <td>Same Day</td>
+    <td>380</td>
+</tr>
+<tr>
+    <td>133</td>
+    <td>Biochemistry</td>
+    <td>LDL-Cholesterol(LDL)</td>
+    <td>Serum/Red Tube</td>
+    <td>Same Day</td>
+    <td>200</td>
+</tr>
+<tr>
+    <td>134</td>
+    <td>Biochemistry</td>
+    <td>Lipid Profile (L.P)</td>
+    <td>Serum/Red Tube</td>
+    <td>Same Day</td>
+    <td>500</td>
+</tr>
+<tr>
+    <td>135</td>
+    <td>Biochemistry</td>
+    <td>Lithium (Lithi)</td>
+    <td>Serum/Red Tube</td>
+    <td>02 Day's</td>
+    <td>550</td>
+</tr>
+<tr>
+    <td>136</td>
+    <td>Biochemistry</td>
+    <td>Liver Function Profile (Liver. FP)</td>
+    <td>Serum/Red Tube</td>
+    <td>Same Day</td>
+    <td>1,150</td>
+</tr>
+<tr>
+    <td>137</td>
+    <td>Biochemistry</td>
+    <td>Liver Function Test (LFT)</td>
+    <td>Serum/Red Tube</td>
+    <td>Same Day</td>
+    <td>400</td>
+</tr>
+<tr>
+    <td>138</td>
+    <td>Biochemistry</td>
+    <td>Liver Kidney Microsomal Antibody (Anti LKM)</td>
+    <td>Serum/Red Tube</td>
+    <td>03 Day's</td>
+    <td>2,500</td>
+</tr>
+<tr>
+    <td>139</td>
+    <td>Biochemistry</td>
+    <td>Ovarian Cyst For for ADA (Ov.Cyst. ADA)</td>
+    <td>Fluid</td>
+    <td>Same Day</td>
+    <td>600</td>
+</tr>
+<tr>
+    <td>140</td>
+    <td>Biochemistry</td>
+    <td>Pericardial fluid for ADA (Pericardial.ADA)</td>
+    <td>Fluid</td>
+    <td>Same Day</td>
+    <td>600</td>
+</tr>
+<tr>
+    <td>141</td>
+    <td>Biochemistry</td>
+    <td>Pericardial fluid for Albumin (Pericardial.Alb)</td>
+    <td>Fluid</td>
+    <td>Same Day</td>
+    <td>200</td>
+</tr>
+<tr>
+    <td>142</td>
+    <td>Biochemistry</td>
+    <td>Pericardial fluid for Biochemical Test (Pericardial.Bio)</td>
+    <td>Fluid</td>
+    <td>Same Day</td>
+    <td>350</td>
+</tr>
+<tr>
+    <td>143</td>
+    <td>Biochemistry</td>
+    <td>Pericardial fluid for Glucose (Pericardial.Gluc)</td>
+    <td>Fluid</td>
+    <td>Same Day</td>
+    <td>150</td>
+</tr>
+<tr>
+    <td>144</td>
+    <td>Biochemistry</td>
+    <td>Pericardial fluid for LDH (Pericardial.LDH)</td>
+    <td>Fluid</td>
+    <td>Same Day</td>
+    <td>400</td>
+</tr>
+<tr>
+    <td>145</td>
+    <td>Biochemistry</td>
+    <td>Pericardial fluid for Protein (Pericardial.Pro)</td>
+    <td>Fluid</td>
+    <td>Same Day</td>
+    <td>200</td>
+</tr>
+<tr>
+    <td>146</td>
+    <td>Biochemistry</td>
+    <td>Peritoneal fluid for ADA (Peritoneal.ADA)</td>
+    <td>Fluid</td>
+    <td>Same Day</td>
+    <td>600</td>
+</tr>
+<tr>
+    <td>147</td>
+    <td>Biochemistry</td>
+    <td>Peritoneal fluid for Albumin (Peritoneal.Alb)</td>
+    <td>Fluid</td>
+    <td>Same Day</td>
+    <td>200</td>
+</tr>
+<tr>
+    <td>148</td>
+    <td>Biochemistry</td>
+    <td>Peritoneal fluid for Amylase( Peritoneal Amylase )</td>
+    <td>Fluid</td>
+    <td>Same Day</td>
+    <td>330</td>
+</tr>
+<tr>
+    <td>149</td>
+    <td>Biochemistry</td>
+    <td>Peritoneal fluid for Biochemical Test (Peritoneal.Bio)</td>
+    <td>Fluid</td>
+    <td>Same Day</td>
+    <td>350</td>
+</tr>
+<tr>
+    <td>150</td>
+    <td>Biochemistry</td>
+    <td>Peritoneal fluid for Glucose (Peritoneal.Gluc)</td>
+    <td>Fluid</td>
+    <td>Same Day</td>
+    <td>150</td>
+</tr>
+<tr>
+    <td>151</td>
+    <td>Biochemistry</td>
+    <td>Peritoneal fluid for LDH (Peritoneal.LDH)</td>
+    <td>Fluid</td>
+    <td>Same Day</td>
+    <td>400</td>
+</tr>
+<tr>
+    <td>152</td>
+    <td>Biochemistry</td>
+    <td>Peritoneal fluid for Protein (Peritoneal.Pro)</td>
+    <td>Fluid</td>
+    <td>Same Day</td>
+    <td>200</td>
+</tr>
+<tr>
+    <td>153</td>
+    <td>Biochemistry</td>
+    <td>Pleural Fluid For ADA (ADA)</td>
+    <td>Fluid</td>
+    <td>Same Day</td>
+    <td>600</td>
+</tr>
+<tr>
+    <td>154</td>
+    <td>Biochemistry</td>
+    <td>Pleural fluid for Albumin (PF. Albumin)</td>
+    <td>Fluid</td>
+    <td>Same Day</td>
+    <td>200</td>
+</tr>
+<tr>
+    <td>155</td>
+    <td>Biochemistry</td>
+    <td>Pleural fluid for biochemical tests (Pleura Fluid)</td>
+    <td>Fluid</td>
+    <td>Same Day</td>
+    <td>350</td>
+</tr>
+<tr>
+    <td>156</td>
+    <td>Biochemistry</td>
+    <td>Pleural fluid for Glucose (PF Glucose)</td>
+    <td>Fluid</td>
+    <td>Same Day</td>
+    <td>150</td>
+</tr>
+<tr>
+    <td>157</td>
+    <td>Biochemistry</td>
+    <td>Pleural fluid for LDH (PF. LDH)</td>
+    <td>Fluid</td>
+    <td>Same Day</td>
+    <td>400</td>
+</tr>
+<tr>
+    <td>158</td>
+    <td>Biochemistry</td>
+    <td>Pleural fluid for Protein (PF. Protein)</td>
+    <td>Fluid</td>
+    <td>Same Day</td>
+    <td>200</td>
+</tr>
+<tr>
+    <td>159</td>
+    <td>Biochemistry</td>
+    <td>Procalcitonin (PCT)</td>
+    <td>Serum/Red Tube</td>
+    <td>02 Day's</td>
+    <td>2000</td>
+</tr>
+<tr>
+    <td>160</td>
+    <td>Biochemistry</td>
+    <td>Progesterone (P4)</td>
+    <td>Serum/Red Tube</td>
+    <td>Same Day</td>
+    <td>380</td>
+</tr>
+<tr>
+    <td>161</td>
+    <td>Biochemistry</td>
+    <td>Protein (Pro)</td>
+    <td>Serum/Red Tube</td>
+    <td>Same Day</td>
+    <td>200</td>
+</tr>
+<tr>
+    <td>162</td>
+    <td>Biochemistry</td>
+    <td>Renal Function Profile (Renal F.P.)</td>
+    <td>Serum/Red Tube</td>
+    <td>Same Day</td>
+    <td>825</td>
+</tr>
+<tr>
+    <td>163</td>
+    <td>Biochemistry</td>
+    <td>Renal Function Test (RFT)</td>
+    <td>Serum/Red Tube</td>
+    <td>Same Day</td>
+    <td>550</td>
+</tr>
+<tr>
+    <td>164</td>
+    <td>Biochemistry</td>
+    <td>Rheumatoid Arthritis (RA)</td>
+    <td>Serum/Red Tube</td>
+    <td>Same Day</td>
+    <td>350</td>
+</tr>
+<tr>
+    <td>165</td>
+    <td>Biochemistry</td>
+    <td>Rose-Waaler (Qualitative) (Rose-Waa)</td>
+    <td>Serum/Red Tube</td>
+    <td>03 Day's</td>
+    <td>330</td>
+</tr>
+<tr>
+    <td>166</td>
+    <td>Biochemistry</td>
+    <td>S. Amylase (S.Amy)</td>
+    <td>Serum/Red Tube</td>
+    <td>Same Day</td>
+    <td>330</td>
+</tr>
+<tr>
+    <td>167</td>
+    <td>Biochemistry</td>
+    <td>S. Calcium (S.Ca2+)</td>
+    <td>Serum/Red Tube</td>
+    <td>Same Day</td>
+    <td>175</td>
+</tr>
+<tr>
+    <td>168</td>
+    <td>Biochemistry</td>
+    <td>S. Electrolyte (S.Elec)</td>
+    <td>Serum/Red Tube</td>
+    <td>Same Day</td>
+    <td>340</td>
+</tr>
+<tr>
+    <td>169</td>
+    <td>Biochemistry</td>
+    <td>S. Inorganic Phosphate (S.I.Phos)</td>
+    <td>Serum/Red Tube</td>
+    <td>Same Day</td>
+    <td>220</td>
+</tr>
+<tr>
+    <td>170</td>
+    <td>Biochemistry</td>
+    <td>S. Iron(S.Fe2+)</td>
+    <td>Serum/Red Tube</td>
+    <td>Same Day</td>
+    <td>400</td>
+</tr>
+<tr>
+    <td>171</td>
+    <td>Biochemistry</td>
+    <td>S. Lipase(S.Lip)</td>
+    <td>Serum/Red Tube / Gel barrier tube</td>
+    <td>Same Day</td>
+    <td>500</td>
+</tr>
+<tr>
+    <td>172</td>
+    <td>Biochemistry</td>
+    <td>Magnesium (S.Mg)</td>
+    <td>Serum/Red Tube / Gel barrier tube</td>
+    <td>Same Day</td>
+    <td>400</td>
+</tr>
+<tr>
+    <td>173</td>
+    <td>Biochemistry</td>
+    <td>Uric Acid(U.A)</td>
+    <td>Serum/Red Tube / Gel barrier tube</td>
+    <td>Same Day</td>
+    <td>200</td>
+</tr>
+<tr>
+    <td>174</td>
+    <td>Biochemistry</td>
+    <td>Serum Albumin Creatinine Ratio (Serum-ACR)</td>
+    <td>Urine + Serum</td>
+    <td>Same Day</td>
+    <td>500</td>
+</tr>
+<tr>
+    <td>175</td>
+    <td>Biochemistry</td>
+    <td>Serum calcitonin (S. calcitonin)</td>
+    <td>Serum/Red Tube</td>
+    <td>02 Day's</td>
+    <td>2900</td>
+</tr>
+<tr>
+    <td>176</td>
+    <td>Biochemistry</td>
+    <td>Serum Copper level (Cop)</td>
+    <td>Serum/Red Tube</td>
+    <td>02 Day's</td>
+    <td>600</td>
+</tr>
+<tr>
+    <td>177</td>
+    <td>Biochemistry</td>
+    <td>Serum Creatinine (S.Creatinine)</td>
+    <td>Serum/Red Tube</td>
+    <td>Same Day</td>
+    <td>170</td>
+</tr>
+<tr>
+    <td>178</td>
+    <td>Biochemistry</td>
+    <td>SERUM KETONE BODY (S.Ketone)</td>
+    <td>Serum/Red Tube</td>
+    <td>03 Day's</td>
+    <td>1000</td>
+</tr>
+<tr>
+    <td>179</td>
+    <td>Biochemistry</td>
+    <td>Serum Osmolality (S.Osmolality)</td>
+    <td>Serum + Glucose Tube</td>
+    <td>Same Day</td>
+    <td>550</td>
+</tr>
+<tr>
+    <td>180</td>
+    <td>Biochemistry</td>
+    <td>Serum Zinc (S.Zinc)</td>
+    <td>Serum/Red Tube</td>
+    <td>02 Day's</td>
+    <td>2000</td>
+</tr>
+<tr>
+    <td>181</td>
+    <td>Biochemistry</td>
+    <td>Sex Hormone Binding Globulin (SHBG)</td>
+    <td>Serum/Red Tube</td>
+    <td>02 Day's</td>
+    <td>600</td>
+</tr>
+<tr>
+    <td>182</td>
+    <td>Biochemistry</td>
+    <td>Spinal Fluid For ADA (Spinal ADA)</td>
+    <td>Biochemistry</td>
+    <td>Same Day</td>
+    <td>600</td>
+</tr>
+<tr>
+    <td>183</td>
+    <td>Biochemistry</td>
+    <td>Spinal Fluid For Albumin (Spinal For Alb)</td>
+    <td>Biochemistry</td>
+    <td>Same Day</td>
+    <td>200</td>
+</tr>
+<tr>
+    <td>184</td>
+    <td>Biochemistry</td>
+    <td>Spinal Fluid For Biochemical (Spinal For Bio)</td>
+    <td>Biochemistry</td>
+    <td>Same Day</td>
+    <td>350</td>
+</tr>
+<tr>
+    <td>185</td>
+    <td>Biochemistry</td>
+    <td>Spinal Fluid For Glucose (Spinal For Glu)</td>
+    <td>Biochemistry</td>
+    <td>Same Day</td>
+    <td>150</td>
+</tr>
+<tr>
+    <td>186</td>
+    <td>Biochemistry</td>
+    <td>Spinal Fluid For Protein (Spinal For Pro)</td>
+    <td>Biochemistry</td>
+    <td>Same Day</td>
+    <td>200</td>
+</tr>
+<tr>
+    <td>187</td>
+    <td>Biochemistry</td>
+    <td>Sputum for eosinophil Count (Sputum Eos)</td>
+    <td>Biochemistry</td>
+    <td>03 Day's</td>
+    <td>275</td>
+</tr>
+<tr>
+    <td>188</td>
+    <td>Biochemistry</td>
+    <td>Synovial Fluid for ADA (SF.ADA)</td>
+    <td>Biochemistry</td>
+    <td>Same Day</td>
+    <td>600</td>
+</tr>
+<tr>
+    <td>189</td>
+    <td>Biochemistry</td>
+    <td>Synovial Fluid for Biochemical (Synovial Bio)</td>
+    <td>Biochemistry</td>
+    <td>Same Day</td>
+    <td>400</td>
+</tr>
+<tr>
+    <td>190</td>
+    <td>Biochemistry</td>
+    <td>Tacrolimus (Tacro)</td>
+    <td>Whole Blood/Levender Tube</td>
+    <td>Same Day</td>
+    <td>3900</td>
+</tr>
+<tr>
+    <td>191</td>
+    <td>Biochemistry</td>
+    <td>Thyrocalcitonin (T.Calcitonine)</td>
+    <td>Serum/Red Tube</td>
+    <td>03 Day's</td>
+    <td>4020</td>
+</tr>
+<tr>
+    <td>192</td>
+    <td>Biochemistry</td>
+    <td>Thyroglobulin (Thyr.Glo)</td>
+    <td>Serum/Red Tube</td>
+    <td>03 Day's</td>
+    <td>2000</td>
+</tr>
+<tr>
+    <td>193</td>
+    <td>Biochemistry</td>
+    <td>Tissue Transglutaminase Ab (tTG Ab)</td>
+    <td>Serum/Red Tube</td>
+    <td>03 Day's</td>
+    <td>2500</td>
+</tr>
+<tr>
+    <td>194</td>
+    <td>Biochemistry</td>
+    <td>Tissue Transglutaminase IgA (tTg-IgA)</td>
+    <td>Serum/Red Tube</td>
+    <td>03 Day's</td>
+    <td>1850</td>
+</tr>
+<tr>
+    <td>195</td>
+    <td>Biochemistry</td>
+    <td>Total Bilirubin(T.Bilirubin)</td>
+    <td>Serum/Red Tube</td>
+    <td>Same Day</td>
+    <td>150</td>
+</tr>
+<tr>
+    <td>196</td>
+    <td>Biochemistry</td>
+    <td>Total Cholesterol(T.Chol)</td>
+    <td>Serum/Red Tube</td>
+    <td>Same Day</td>
+    <td>170</td>
+</tr>
+<tr>
+    <td>197</td>
+    <td>Biochemistry</td>
+    <td>Total Iron Binding Capacity (TIBC)</td>
+    <td>Serum/Red Tube</td>
+    <td>Same Day</td>
+    <td>450</td>
+</tr>
+<tr>
+    <td>198</td>
+    <td>Biochemistry</td>
+    <td>Total Protein (T.Protein)</td>
+    <td>Serum/Red Tube</td>
+    <td>Same Day</td>
+    <td>175</td>
+</tr>
+<tr>
+    <td>199</td>
+    <td>Biochemistry</td>
+    <td>Treponema Pallidum Antibody (TPAB)</td>
+    <td>Serum/Red Tube</td>
+    <td>03 Day's</td>
+    <td>1500</td>
+</tr>
+<tr>
+    <td>200</td>
+    <td>Biochemistry</td>
+    <td>Triglycerides(TG)</td>
+    <td>Serum/Red Tube</td>
+    <td>Same Day</td>
+    <td>200</td>
+</tr>
+<tr>
+    <td>201</td>
+    <td>Biochemistry</td>
+    <td>Triiodothyronine (T3)</td>
+    <td>Serum/Red Tube</td>
+    <td>Same Day</td>
+    <td>300</td>
+</tr>
+<tr>
+    <td>202</td>
+    <td>Biochemistry</td>
+    <td>Urea (Urea)</td>
+    <td>Serum/Red Tube</td>
+    <td>Same Day</td>
+    <td>200</td>
+</tr>
+<tr>
+    <td>203</td>
+    <td>Biochemistry</td>
+    <td>Urinary Lipase (U.Lipase)</td>
+    <td>Urine</td>
+    <td>Same Day</td>
+    <td>1000</td>
+</tr>
+<tr>
+    <td>204</td>
+    <td>Biochemistry</td>
+    <td>Urinary Vanilmandelic Acid (Urine VMA)</td>
+    <td>Urine</td>
+    <td>02 Day's</td>
+    <td>1250</td>
+</tr>
+<tr>
+    <td>205</td>
+    <td>Biochemistry</td>
+    <td>Urine 24 Hrs 17 OH Progesterone (U.17 OH pro)</td>
+    <td>Urine</td>
+    <td>Sun</td>
+    <td>2200</td>
+</tr>
+<tr>
+    <td>206</td>
+    <td>Biochemistry</td>
+    <td>Urine Albumin (U.Alb)</td>
+    <td>Urine</td>
+    <td>Same Day</td>
+    <td>200</td>
+</tr>
+<tr>
+    <td>207</td>
+    <td>Biochemistry</td>
+    <td>Urine Albumin Creatinine Ratio (U.M.Alb Ratio)</td>
+    <td>Urine</td>
+    <td>Same Day</td>
+    <td>500</td>
+</tr>
+<tr>
+    <td>208</td>
+    <td>Biochemistry</td>
+    <td>Urine Amylase(U.Amy)</td>
+    <td>Urine</td>
+    <td>Same Day</td>
+    <td>400</td>
+</tr>
+<tr>
+    <td>209</td>
+    <td>Biochemistry</td>
+    <td>Urine Calcium (U.Cal)</td>
+    <td>Urine</td>
+    <td>Same Day</td>
+    <td>180</td>
+</tr>
+<tr>
+    <td>210</td>
+    <td>Biochemistry</td>
+    <td>Urine Calcium Creatinine Ratio (U. CCR)</td>
+    <td>Urine + Serum</td>
+    <td>Same Day</td>
+    <td>1000</td>
+</tr>
+<tr>
+    <td>211</td>
+    <td>Biochemistry</td>
+    <td>Urine Copper (U. Copper)</td>
+    <td>Urine</td>
+    <td>03 Day's</td>
+    <td>2700</td>
+</tr>
+<tr>
+    <td>212</td>
+    <td>Biochemistry</td>
+    <td>Urine Creatinine (U.Crea)</td>
+    <td>Urine</td>
+    <td>Same Day</td>
+    <td>175</td>
+</tr>
+<tr>
+    <td>213</td>
+    <td>Biochemistry</td>
+    <td>Urine Electrolyte (U.Electro)</td>
+    <td>Urine</td>
+    <td>Same Day</td>
+    <td>500</td>
+</tr>
+<tr>
+    <td>214</td>
+    <td>Biochemistry</td>
+    <td>Urine for Bence-Jones Protein (Bence-Jones Protein)</td>
+    <td>Urine</td>
+    <td>03 Day's</td>
+    <td>350</td>
+</tr>
+<tr>
+    <td>215</td>
+    <td>Biochemistry</td>
+    <td>Urine Glucose (U.Gluc)</td>
+    <td>Urine</td>
+    <td>Same Day</td>
+    <td>100</td>
+</tr>
+<tr>
+    <td>216</td>
+    <td>Biochemistry</td>
+    <td>Urine Leptospira antibody (U.LA)</td>
+    <td>Urine</td>
+    <td>03 Day's</td>
+    <td>2000</td>
+</tr>
+<tr>
+    <td>217</td>
+    <td>Biochemistry</td>
+    <td>Urine Microalbumin(U.M.Alb)</td>
+    <td>Urine</td>
+    <td>Same Day</td>
+    <td>450</td>
+</tr>
+<tr>
+    <td>218</td>
+    <td>Biochemistry</td>
+    <td>Urine Osmolality (U.Osmolality)</td>
+    <td>Urine</td>
+    <td>Same Day</td>
+    <td>500</td>
+</tr>
+<tr>
+    <td>219</td>
+    <td>Biochemistry</td>
+    <td>Urine Osmolarity (Urine Osmo)</td>
+    <td>Urine</td>
+    <td>Same Day</td>
+    <td>500</td>
+</tr>
+<tr>
+    <td>220</td>
+    <td>Biochemistry</td>
+    <td>Urine Phosphate (U.Phos)</td>
+    <td>Urine</td>
+    <td>Same Day</td>
+    <td>200</td>
+</tr>
+<tr>
+    <td>221</td>
+    <td>Biochemistry</td>
+    <td>Urine Protein (U.Pro)</td>
+    <td>Urine</td>
+    <td>Same Day</td>
+    <td>200</td>
+</tr>
+<tr>
+    <td>222</td>
+    <td>Biochemistry</td>
+    <td>Urine Protein Creatinine Ratio (Urine PCR)</td>
+    <td>Urine</td>
+    <td>Same Day</td>
+    <td>500</td>
+</tr>
+<tr>
+    <td>223</td>
+    <td>Biochemistry</td>
+    <td>Urine Total Protein(U.T.P)</td>
+    <td>Urine + 24 Hrs Vol.</td>
+    <td>Same Day</td>
+    <td>250</td>
+</tr>
+<tr>
+    <td>224</td>
+    <td>Biochemistry</td>
+    <td>Urine Uric Acid (U.Uric acid)</td>
+    <td>Urine</td>
+    <td>Same Day</td>
+    <td>200</td>
+</tr>
+<tr>
+    <td>225</td>
+    <td>Biochemistry</td>
+    <td>Valporic Acid (Val acid)</td>
+    <td>Serum/Red Tube</td>
+    <td>03 Day's</td>
+    <td>600</td>
+</tr>
+<tr>
+    <td>226</td>
+    <td>Biochemistry</td>
+    <td>17 OH Progesterone (17 OH-pro)</td>
+    <td>Serum/Red Tube</td>
+    <td>Suterday</td>
+    <td>1800</td>
+</tr>
+<tr>
+    <td>227</td>
+    <td>Biochemistry</td>
+    <td>24 Hour Urine Protein Electrophoresis (24 HUPE)</td>
+    <td>Urine + 24 Hrs Vol.</td>
+    <td>7-9 Day's</td>
+    <td>7300</td>
+</tr>
+<tr>
+    <td>228</td>
+    <td>Biochemistry</td>
+    <td>24 hrs Urinary Copper (U.Copper)</td>
+    <td>Urine + 24 Hrs Vol.</td>
+    <td>03 Working Day's</td>
+    <td>2700</td>
+</tr>
+<tr>
+    <td>229</td>
+    <td>Biochemistry</td>
+    <td>24 Hrs Urine Calcium(24. Urine Ca+)</td>
+    <td>Urine + 24 Hrs Vol.</td>
+    <td>Same Day</td>
+    <td>175</td>
+</tr>
+<tr>
+    <td>230</td>
+    <td>Biochemistry</td>
+    <td>24 Hrs Urine Citrate (Citrate)</td>
+    <td>Urine + 24 Hrs Vol.</td>
+    <td>03 Working Day's</td>
+    <td>1600</td>
+</tr>
+<tr>
+    <td>231</td>
+    <td>Biochemistry</td>
+    <td>24 Hrs Urine Copper.(ICPMS)</td>
+    <td>Urine + 24 Hrs Vol.</td>
+    <td>7-9 Day's</td>
+    <td>3500</td>
+</tr>
+<tr>
+    <td>232</td>
+    <td>Biochemistry</td>
+    <td>24 Hrs Urine Creatinine (24. U. Cre)</td>
+    <td>Urine + 24 Hrs Vol.</td>
+    <td>Same Day</td>
+    <td>175</td>
+</tr>
+<tr>
+    <td>233</td>
+    <td>Biochemistry</td>
+    <td>24 Hrs Urine Free Cortisol (24. U. Free Cortisol)</td>
+    <td>Urine + 24 Hrs Vol.</td>
+    <td>5-7 Day's</td>
+    <td>1600</td>
+</tr>
+<tr>
+    <td>234</td>
+    <td>Biochemistry</td>
+    <td>24 Hrs Urine Oxalate (Oxalate)</td>
+    <td>Urine + 24 Hrs Vol.</td>
+    <td>5-7 Day's</td>
+    <td>2000</td>
+</tr>
+<tr>
+    <td>235</td>
+    <td>Biochemistry</td>
+    <td>24 Hrs. Urinary Electrolytes (24 h Urine Ele)</td>
+    <td>Urine + 24 Hrs Vol.</td>
+    <td>Same Day</td>
+    <td>500</td>
+</tr>
+<tr>
+    <td>236</td>
+    <td>Clinical Pathology</td>
+    <td>Mantoux Test (MT)</td>
+    <td></td>
+    <td>72 Hrs</td>
+    <td>200</td>
+</tr>
+<tr>
+    <td>237</td>
+    <td>Clinical Pathology</td>
+    <td>Pregnancy Test(Preg. Test)</td>
+    <td>Urine</td>
+    <td>01 Day</td>
+    <td>200</td>
+</tr>
+<tr>
+    <td>238</td>
+    <td>Clinical Pathology</td>
+    <td>Semen Analysis(Sem. Ana)</td>
+    <td>Semen</td>
+    <td>01 Day</td>
+    <td>600</td>
+</tr>
+<tr>
+    <td>239</td>
+    <td>Clinical Pathology</td>
+    <td>Stool Occult Blood test(Stool OBT)</td>
+    <td>Stool</td>
+    <td>01 Day</td>
+    <td>200</td>
+</tr>
+<tr>
+    <td>240</td>
+    <td>Clinical Pathology</td>
+    <td>Stool Routine Examination(Stool R.E.)</td>
+    <td>Stool</td>
+    <td>01 Day</td>
+    <td>200</td>
+</tr>
+<tr>
+    <td>241</td>
+    <td>Clinical Pathology</td>
+    <td>Urine Dipstick Test (Urine Dipstick)</td>
+    <td>Urine</td>
+    <td>5-7 Day's</td>
+    <td>500</td>
+</tr>
+<tr>
+    <td>242</td>
+    <td>Clinical Pathology</td>
+    <td>Reducing Substance (RS)</td>
+    <td>Stool</td>
+    <td>01 Day</td>
+    <td>250</td>
+</tr>
+<tr>
+    <td>243</td>
+    <td>Clinical Pathology</td>
+    <td>Urine Routine Microscopic Examination PLUS (Urine RME PLUS)</td>
+    <td>Urine</td>
+    <td>01 Day</td>
+    <td>150</td>
+</tr>
+<tr>
+    <td>244</td>
+    <td>Histopathology</td>
+    <td>Histopathology Small Tissue (Histo-Small)</td>
+    <td>Tissue</td>
+    <td>4 working days</td>
+    <td>600</td>
+</tr>
+<tr>
+    <td>245</td>
+    <td>Histopathology</td>
+    <td>Histopathology Medium Tissue (Histo-Medi)</td>
+    <td>Tissue</td>
+    <td>4 working days</td>
+    <td>1100</td>
+</tr>
+<tr>
+    <td>246</td>
+    <td>Histopathology</td>
+    <td>Histopathology Large Tissue (Histo Large)</td>
+    <td>Tissue</td>
+    <td>4 working days</td>
+    <td>1600</td>
+</tr>
+<tr>
+    <td>247</td>
+    <td>Histopathology</td>
+    <td>Histopathology Extra large Tissue (Histo-Extra large)</td>
+    <td>Tissue</td>
+    <td>4 working days</td>
+    <td>2200</td>
+</tr>
+<tr>
+    <td>248</td>
+    <td>Microbiology</td>
+    <td>Ascitic fluid for AFB Stain (Ascitic F. AFB)</td>
+    <td>Microbiology</td>
+    <td>02 Day's</td>
+    <td>180</td>
+</tr>
+<tr>
+    <td>249</td>
+    <td>Microbiology</td>
+    <td>Ascitic fluid for C/S (Ascitic C/S)</td>
+    <td>Microbiology</td>
+    <td>3-4 Day's</td>
+    <td>250</td>
+</tr>
+<tr>
+    <td>250</td>
+    <td>Microbiology</td>
+    <td>Ascitic fluid for Gram Stain (Ascitic F. GS)</td>
+    <td>Microbiology</td>
+    <td>02 Day's</td>
+    <td>180</td>
+</tr>
+<tr>
+    <td>251</td>
+    <td>Microbiology</td>
+    <td>Aspirate fluid For C/S (Asp.flu.C/S)</td>
+    <td>Microbiology</td>
+    <td>3-4 Day's</td>
+    <td>250</td>
+</tr>
+<tr>
+    <td>252</td>
+    <td>Microbiology</td>
+    <td>Aural Swab For C/S (A. Swab For C/S)</td>
+    <td>Microbiology</td>
+    <td>3-4 Day's</td>
+    <td>250</td>
+</tr>
+<tr>
+    <td>253</td>
+    <td>Microbiology</td>
+    <td>BAL FOR C/S (BAL C/S)</td>
+    <td>Microbiology</td>
+    <td>3-4 Day's</td>
+    <td>250</td>
+</tr>
+<tr>
+    <td>254</td>
+    <td>Microbiology</td>
+    <td>Bile For C/S (Bile C/S)</td>
+    <td>Microbiology</td>
+    <td>3-4 Day's</td>
+    <td>250</td>
+</tr>
+<tr>
+    <td>255</td>
+    <td>Microbiology</td>
+    <td>Blood for C/S (Blood C/S BD)</td>
+    <td>Microbiology</td>
+    <td>3-4 Day's</td>
+    <td>750</td>
+</tr>
+<tr>
+    <td>256</td>
+    <td>Microbiology</td>
+    <td>Blood for C/S (Blood C/S TR)</td>
+    <td>Microbiology</td>
+    <td>3-4 Day's</td>
+    <td>650</td>
+</tr>
+<tr>
+    <td>257</td>
+    <td>Microbiology</td>
+    <td>Bronchoalveolar lavage for AFB Stain (Bal. AFB)</td>
+    <td>Microbiology</td>
+    <td>02 Day's</td>
+    <td>180</td>
+</tr>
+<tr>
+    <td>258</td>
+    <td>Microbiology</td>
+    <td>Bronchoalveolarlavage Gram Stain (Bal. Stain)</td>
+    <td>Microbiology</td>
+    <td>02 Day's</td>
+    <td>180</td>
+</tr>
+<tr>
+    <td>259</td>
+    <td>Microbiology</td>
+    <td>Catheter tip for C/S (CT. C/S)</td>
+    <td>Microbiology</td>
+    <td>3-4 Day's</td>
+    <td>250</td>
+</tr>
+<tr>
+    <td>260</td>
+    <td>Microbiology</td>
+    <td>Cerebrospinal Fluid for AFB Stain(CSF AFB)</td>
+    <td>Microbiology</td>
+    <td>02 Day's</td>
+    <td>180</td>
+</tr>
+<tr>
+    <td>261</td>
+    <td>Microbiology</td>
+    <td>Cerebrospinal Fluid for Gram Stain(CSF Gm)</td>
+    <td>Microbiology</td>
+    <td>02 Day's</td>
+    <td>180</td>
+</tr>
+<tr>
+    <td>262</td>
+    <td>Microbiology</td>
+    <td>Cerebrospinal fluid for C/S(CSF C/S)</td>
+    <td>Microbiology</td>
+    <td>3-4 Day's</td>
+    <td>250</td>
+</tr>
+<tr>
+    <td>263</td>
+    <td>Microbiology</td>
+    <td>Cervical Swab for C/S(Cer. Swab C/S)</td>
+    <td>Microbiology</td>
+    <td>3-4 Day's</td>
+    <td>250</td>
+</tr>
+<tr>
+    <td>264</td>
+    <td>Microbiology</td>
+    <td>Cervical Swab for Gram Stain (Cerv. GS)</td>
+    <td>Microbiology</td>
+    <td>02 Day's</td>
+    <td>180</td>
+</tr>
+<tr>
+    <td>265</td>
+    <td>Microbiology</td>
+    <td>Cervical Swab for Gram Stain(Cer. Swab Gm)</td>
+    <td>Microbiology</td>
+    <td>02 Day's</td>
+    <td>180</td>
+</tr>
+<tr>
+    <td>266</td>
+    <td>Microbiology</td>
+    <td>Conjunctival (Rt./Lt) for C/S(Conjunc. (R/L) C/S)</td>
+    <td>Microbiology</td>
+    <td>3-4 Day's</td>
+    <td>250</td>
+</tr>
+<tr>
+    <td>267</td>
+    <td>Microbiology</td>
+    <td>Conjunctival (Rt./Lt) for Gram Stain(Conjunc. (R/L) Gm)</td>
+    <td>Microbiology</td>
+    <td>02 Day's</td>
+    <td>180</td>
+</tr>
+<tr>
+    <td>268</td>
+    <td>Microbiology</td>
+    <td>Conjunctival Swab for AFB Stain (Conjunctival AFB Stain)</td>
+    <td>Swab</td>
+    <td>02 Day's</td>
+    <td>180</td>
+</tr>
+<tr>
+    <td>269</td>
+    <td>Microbiology</td>
+    <td>Conjunctival Swab for C/S (Conjunctival C/S)</td>
+    <td>Swab</td>
+    <td>3-4 Day's</td>
+    <td>250</td>
+</tr>
+<tr>
+    <td>270</td>
+    <td>Microbiology</td>
+    <td>Conjunctival Swab for Fungus (Conjunctival Fungus)</td>
+    <td>Swab</td>
+    <td>02 Day's</td>
+    <td>250</td>
+</tr>
+<tr>
+    <td>271</td>
+    <td>Microbiology</td>
+    <td>Conjunctival Swab for Gram Stain (Conjunctival Gram Stain)</td>
+    <td>Swab</td>
+    <td>02 Day's</td>
+    <td>180</td>
+</tr>
+<tr>
+    <td>272</td>
+    <td>Microbiology</td>
+    <td>Cystic Fluid For Gram AFB (Cystic AFB)</td>
+    <td>Microbiology</td>
+    <td>02 Day's</td>
+    <td>180</td>
+</tr>
+<tr>
+    <td>273</td>
+    <td>Microbiology</td>
+    <td>Cystic Fluid For C/S (Cystic C/S)</td>
+    <td>Microbiology</td>
+    <td>3-4 Day's</td>
+    <td>250</td>
+</tr>
+<tr>
+    <td>274</td>
+    <td>Microbiology</td>
+    <td>Cystic Fluid For Gram Stain (Cystic Gm)</td>
+    <td>Microbiology</td>
+    <td>02 Day's</td>
+    <td>180</td>
+</tr>
+<tr>
+    <td>275</td>
+    <td>Microbiology</td>
+    <td>Cystic Fluid for CS (Cystic C/S)</td>
+    <td>Microbiology</td>
+    <td>3-4 Day's</td>
+    <td>250</td>
+</tr>
+<tr>
+    <td>276</td>
+    <td>Microbiology</td>
+    <td>Drain Fluid For Gram Stain( Drain For Gram Stain)</td>
+    <td>Microbiology</td>
+    <td>02 Day's</td>
+    <td>180</td>
+</tr>
+<tr>
+    <td>277</td>
+    <td>Microbiology</td>
+    <td>Drain Fluid For AFB Stain( Drain For AFB)</td>
+    <td>Fluid</td>
+    <td>02 Day's</td>
+    <td>180</td>
+</tr>
+<tr>
+    <td>278</td>
+    <td>Microbiology</td>
+    <td>Drain Fluid For C/S(Drain Fluid For C/S)</td>
+    <td>Fluid</td>
+    <td>3-4 Day's</td>
+    <td>250</td>
+</tr>
+<tr>
+    <td>279</td>
+    <td>Microbiology</td>
+    <td>Ear Swab (Rt./Lt) for C/S(Ear Swab (R/L) C/S)</td>
+    <td>Swab</td>
+    <td>3-4 Day's</td>
+    <td>250</td>
+</tr>
+<tr>
+    <td>280</td>
+    <td>Microbiology</td>
+    <td>Ear Swab (Rt./Lt) for Gram Stain(Ear Swab (R/L) Gm)</td>
+    <td>Swab</td>
+    <td>02 Day's</td>
+    <td>180</td>
+</tr>
+<tr>
+    <td>281</td>
+    <td>Microbiology</td>
+    <td>Hair Clipping For Culture (Hair Clipping C/S)</td>
+    <td>Hair</td>
+    <td>15-16 Day's</td>
+    <td>250</td>
+</tr>
+<tr>
+    <td>282</td>
+    <td>Microbiology</td>
+    <td>Hair Clipping for RE (Hair Clipp, RE)</td>
+    <td>Hair</td>
+    <td>02 Day's</td>
+    <td>180</td>
+</tr>
+<tr>
+    <td>283</td>
+    <td>Microbiology</td>
+    <td>High Vaginal Swab for AFB Stain (HVS for AFB)</td>
+    <td>Swab</td>
+    <td>02 Day's</td>
+    <td>180</td>
+</tr>
+<tr>
+    <td>284</td>
+    <td>Microbiology</td>
+    <td>High Vaginal Swab for C/S(HVS C/S)</td>
+    <td>Swab</td>
+    <td>3-4 Day's</td>
+    <td>250</td>
+</tr>
+<tr>
+    <td>285</td>
+    <td>Microbiology</td>
+    <td>High Vaginal Swab for Gram Stain(HVS Gm)</td>
+    <td>Swab</td>
+    <td>02 Day's</td>
+    <td>180</td>
+</tr>
+<tr>
+    <td>286</td>
+    <td>Microbiology</td>
+    <td>Hydrocele Fluid For C/S (H.F C/S)</td>
+    <td>Fluid</td>
+    <td>3-4 Day's</td>
+    <td>250</td>
+</tr>
+<tr>
+    <td>287</td>
+    <td>Microbiology</td>
+    <td>Intervertebral Disc Fluid For C/S (Intervertebral. C/S)</td>
+    <td>Fluid</td>
+    <td>3-4 Day's</td>
+    <td>250</td>
+</tr>
+<tr>
+    <td>288</td>
+    <td>Microbiology</td>
+    <td>Joint Fluid for AFB Stain (Joint. AFB)</td>
+    <td>Fluid</td>
+    <td>02 Day's</td>
+    <td>180</td>
+</tr>
+<tr>
+    <td>289</td>
+    <td>Microbiology</td>
+    <td>Joint Fluid for Gram Stain (Joint. G. Stain)</td>
+    <td>Fluid</td>
+    <td>02 Day's</td>
+    <td>180</td>
+</tr>
+<tr>
+    <td>290</td>
+    <td>Microbiology</td>
+    <td>Joint fluid for C/S (Joint C/S)</td>
+    <td>Fluid</td>
+    <td>3-4 Day's</td>
+    <td>250</td>
+</tr>
+<tr>
+    <td>291</td>
+    <td>Microbiology</td>
+    <td>Lesional Swab For C/S (Lesional C/S)</td>
+    <td>Swab</td>
+    <td>3-4 Day's</td>
+    <td>250</td>
+</tr>
+<tr>
+    <td>292</td>
+    <td>Microbiology</td>
+    <td>Lesional Swab For Gram Stain (Lesional G/S)</td>
+    <td>Swab</td>
+    <td>02 Day's</td>
+    <td>180</td>
+</tr>
+<tr>
+    <td>293</td>
+    <td>Microbiology</td>
+    <td>Nail Clipping For Culture (Nail Clipp C/S)</td>
+    <td>Nail</td>
+    <td>15-16 Day's</td>
+    <td>250</td>
+</tr>
+<tr>
+    <td>294</td>
+    <td>Microbiology</td>
+    <td>Nail Scraping for Fungus M/E(Nail Scrp.M/E)</td>
+    <td>Nail</td>
+    <td>02 Day's</td>
+    <td>180</td>
+</tr>
+<tr>
+    <td>295</td>
+    <td>Microbiology</td>
+    <td>Nasal Swab for AFB Stain (Nasal Swab AFB)</td>
+    <td>Swab</td>
+    <td>02 Day's</td>
+    <td>180</td>
+</tr>
+<tr>
+    <td>296</td>
+    <td>Microbiology</td>
+    <td>Nasal Swab for C/S(Nasal Swab C/S)</td>
+    <td>Swab</td>
+    <td>3-4 Day's</td>
+    <td>250</td>
+</tr>
+<tr>
+    <td>297</td>
+    <td>Microbiology</td>
+    <td>Nasal Swab for Gram Stain(Nasal Swab Gm)</td>
+    <td>Swab</td>
+    <td>02 Day's</td>
+    <td>180</td>
+</tr>
+<tr>
+    <td>298</td>
+    <td>Microbiology</td>
+    <td>Nasopharyngeal Swab for AFB Stain(Nasoph Swab AFB)</td>
+    <td>Swab</td>
+    <td>02 Day's</td>
+    <td>180</td>
+</tr>
+<tr>
+    <td>299</td>
+    <td>Microbiology</td>
+    <td>Nasopharyngeal Swab for C/S(Nasoph Swab C/S)</td>
+    <td>Swab</td>
+    <td>3-4 Day's</td>
+    <td>250</td>
+</tr>
+<tr>
+    <td>300</td>
+    <td>Microbiology</td>
+    <td>Nasopharyngeal Swab for Gram Stain(Nasoph Swab Gm)</td>
+    <td>Swab</td>
+    <td>02 Day's</td>
+    <td>180</td>
+</tr>
+<tr>
+    <td>301</td>
+    <td>Microbiology</td>
+    <td>Nipple discharge For AFB Stain - (Nipple AFB)</td>
+    <td>Swab</td>
+    <td>02 Day's</td>
+    <td>180</td>
+</tr>
+<tr>
+    <td>302</td>
+    <td>Microbiology</td>
+    <td>Nipple discharge For C/S ( N.discharge C/S)</td>
+    <td>Swab</td>
+    <td>3-4 Day's</td>
+    <td>250</td>
+</tr>
+<tr>
+    <td>303</td>
+    <td>Microbiology</td>
+    <td>Nipple discharge For Gram Stain (Nipple Gram Stain)</td>
+    <td>Swab</td>
+    <td>02 Day's</td>
+    <td>180</td>
+</tr>
+<tr>
+    <td>304</td>
+    <td>Microbiology</td>
+    <td>Oral Swab for AFB Stain (Oral.Swab. AFB)</td>
+    <td>Swab</td>
+    <td>02 Day's</td>
+    <td>180</td>
+</tr>
+<tr>
+    <td>305</td>
+    <td>Microbiology</td>
+    <td>Oral Swab for C/S (Oral Swab C/S)</td>
+    <td>Swab</td>
+    <td>3-4 Day's</td>
+    <td>250</td>
+</tr>
+<tr>
+    <td>306</td>
+    <td>Microbiology</td>
+    <td>Oral Swab for Gram Stain (Oral.Swab.GS)</td>
+    <td>Swab</td>
+    <td>02 Day's</td>
+    <td>180</td>
+</tr>
+<tr>
+    <td>307</td>
+    <td>Microbiology</td>
+    <td>Ovarian Cyst For Gram Stain (Ov.Cyst.. Stain)</td>
+    <td>Cyst</td>
+    <td>02 Day's</td>
+    <td>180</td>
+</tr>
+<tr>
+    <td>308</td>
+    <td>Microbiology</td>
+    <td>Ovarian Cyst for AFB Stain (Ov.Cyst. AFB)</td>
+    <td>Cyst</td>
+    <td>02 Day's</td>
+    <td>180</td>
+</tr>
+<tr>
+    <td>309</td>
+    <td>Microbiology</td>
+    <td>Pericardial Fluid for AFB Stain(Pericar Fluid AFB)</td>
+    <td>Microbiology</td>
+    <td>02 Day's</td>
+    <td>180</td>
+</tr>
+<tr>
+    <td>310</td>
+    <td>Microbiology</td>
+    <td>Pericardial Fluid for C/S(Pericar Fluid C/S)</td>
+    <td>Microbiology</td>
+    <td>3-4 Day's</td>
+    <td>250</td>
+</tr>
+<tr>
+    <td>311</td>
+    <td>Microbiology</td>
+    <td>Pericardial Fluid for Gram Stain(Pericar Fluid Gm)</td>
+    <td>Microbiology</td>
+    <td>02 Day's</td>
+    <td>180</td>
+</tr>
+<tr>
+    <td>312</td>
+    <td>Microbiology</td>
+    <td>Pericardial fluid for C/S (Pericardial C/S)</td>
+    <td>Microbiology</td>
+    <td>3-4 Day's</td>
+    <td>250</td>
+</tr>
+<tr>
+    <td>313</td>
+    <td>Microbiology</td>
+    <td>Peritoneal Fluid for AFB Stain(Perito Fluid AFB)</td>
+    <td>Microbiology</td>
+    <td>02 Day's</td>
+    <td>180</td>
+</tr>
+<tr>
+    <td>314</td>
+    <td>Microbiology</td>
+    <td>Peritoneal Fluid for C/S(Perito Fluid C/S)</td>
+    <td>Microbiology</td>
+    <td>3-4 Day's</td>
+    <td>250</td>
+</tr>
+<tr>
+    <td>315</td>
+    <td>Microbiology</td>
+    <td>Peritoneal Fluid for Gram Stain(Perito Fluid Gm)</td>
+    <td>Microbiology</td>
+    <td>02 Day's</td>
+    <td>180</td>
+</tr>
+<tr>
+    <td>316</td>
+    <td>Microbiology</td>
+    <td>Peritoneal fluid for C/S (Peritoneal C/S)</td>
+    <td>Microbiology</td>
+    <td>3-4 Day's</td>
+    <td>250</td>
+</tr>
+<tr>
+    <td>317</td>
+    <td>Microbiology</td>
+    <td>Pleural Fluid for AFB Stain(Pleu Fluid AFB)</td>
+    <td>Microbiology</td>
+    <td>02 Day's</td>
+    <td>180</td>
+</tr>
+<tr>
+    <td>318</td>
+    <td>Microbiology</td>
+    <td>Pleural Fluid for C/S(Pleu Fluid C/S)</td>
+    <td>Microbiology</td>
+    <td>3-4 Day's</td>
+    <td>250</td>
+</tr>
+<tr>
+    <td>319</td>
+    <td>Microbiology</td>
+    <td>Pleural Fluid for Gram Stain(Pleural Fluid Gm)</td>
+    <td>Microbiology</td>
+    <td>02 Day's</td>
+    <td>180</td>
+</tr>
+<tr>
+    <td>320</td>
+    <td>Microbiology</td>
+    <td>Prostatic Smear for C/S(Pros.Smear C/S)</td>
+    <td>Smear</td>
+    <td>3-4 Day's</td>
+    <td>250</td>
+</tr>
+<tr>
+    <td>321</td>
+    <td>Microbiology</td>
+    <td>Prostatic Smear for Gram Stain(Pros. Smear Gm)</td>
+    <td>Smear</td>
+    <td>02 Day's</td>
+    <td>180</td>
+</tr>
+<tr>
+    <td>322</td>
+    <td>Microbiology</td>
+    <td>Pus for AFB Stain(Pus AFB)</td>
+    <td>Pus</td>
+    <td>02 Day's</td>
+    <td>180</td>
+</tr>
+<tr>
+    <td>323</td>
+    <td>Microbiology</td>
+    <td>Pus for C/S(Pus C/S)</td>
+    <td>Pus</td>
+    <td>3-4 Day's</td>
+    <td>250</td>
+</tr>
+<tr>
+    <td>324</td>
+    <td>Microbiology</td>
+    <td>Pus for Gram Stain(Pus Gm)</td>
+    <td>Pus</td>
+    <td>02 Day's</td>
+    <td>180</td>
+</tr>
+<tr>
+    <td>325</td>
+    <td>Microbiology</td>
+    <td>Scalp Scraping For Culture (Scalp C/S)</td>
+    <td>Sclap</td>
+    <td>3-4 Day's</td>
+    <td>250</td>
+</tr>
+<tr>
+    <td>326</td>
+    <td>Microbiology</td>
+    <td>Scalp Scraping for Fungus M/E (Scalp Scrap. M/E)</td>
+    <td>Sclap</td>
+    <td>02 Day's</td>
+    <td>200</td>
+</tr>
+<tr>
+    <td>327</td>
+    <td>Microbiology</td>
+    <td>Semen For AFB Stain (Semen For AFB)</td>
+    <td>Semen</td>
+    <td>02 Day's</td>
+    <td>180</td>
+</tr>
+<tr>
+    <td>328</td>
+    <td>Microbiology</td>
+    <td>Semen For C/S (Semen. C/S)</td>
+    <td>Semen</td>
+    <td>3-4 Day's</td>
+    <td>250</td>
+</tr>
+<tr>
+    <td>329</td>
+    <td>Microbiology</td>
+    <td>Semen For Gram Stain (Semen For Gram Stain)</td>
+    <td>Semen</td>
+    <td>02 Day's</td>
+    <td>180</td>
+</tr>
+<tr>
+    <td>330</td>
+    <td>Microbiology</td>
+    <td>Skin Scraping for Culture (Skin Scrap C/S)</td>
+    <td>Skin</td>
+    <td>3-4 Day's</td>
+    <td>250</td>
+</tr>
+<tr>
+    <td>331</td>
+    <td>Microbiology</td>
+    <td>Skin Scraping for Fungus M/E(SSF M/E)</td>
+    <td>Skin</td>
+    <td>15-16 Day's</td>
+    <td>200</td>
+</tr>
+<tr>
+    <td>332</td>
+    <td>Microbiology</td>
+    <td>Spinal Fluid For AFB Stain</td>
+    <td>Microbiology</td>
+    <td>02 Day's</td>
+    <td>600</td>
+</tr>
+<tr>
+    <td>333</td>
+    <td>Microbiology</td>
+    <td>Spinal Fluid For AFB Stain (Spinal AFB)</td>
+    <td>Microbiology</td>
+    <td>02 Day's</td>
+    <td>200</td>
+</tr>
+<tr>
+    <td>334</td>
+    <td>Microbiology</td>
+    <td>Spinal Fluid For C/S (Spinal C/S)</td>
+    <td>Microbiology</td>
+    <td>3-4 Day's</td>
+    <td>250</td>
+</tr>
+<tr>
+    <td>335</td>
+    <td>Microbiology</td>
+    <td>Spinal Fluid For Gram Stain (Spinal Gram)</td>
+    <td>Microbiology</td>
+    <td>02 Day's</td>
+    <td>200</td>
+</tr>
+<tr>
+    <td>336</td>
+    <td>Microbiology</td>
+    <td>Sputum for AFB Stain(Sputum AFB)</td>
+    <td>Sputum</td>
+    <td>02 Day's</td>
+    <td>180</td>
+</tr>
+<tr>
+    <td>337</td>
+    <td>Microbiology</td>
+    <td>Sputum for C/S(Spu. C/S)</td>
+    <td>Sputum</td>
+    <td>3-4 Day's</td>
+    <td>250</td>
+</tr>
+<tr>
+    <td>338</td>
+    <td>Microbiology</td>
+    <td>Sputum for Fungus (Sputum Fungus)</td>
+    <td>Sputum</td>
+    <td>02 Day's</td>
+    <td>320</td>
+</tr>
+<tr>
+    <td>339</td>
+    <td>Microbiology</td>
+    <td>Sputum for Gram Stain(Sputum Gm)</td>
+    <td>Sputum</td>
+    <td>02 Day's</td>
+    <td>180</td>
+</tr>
+<tr>
+    <td>340</td>
+    <td>Microbiology</td>
+    <td>Sputum for KLB Stain(Sputum KLB)</td>
+    <td>Sputum</td>
+    <td>02 Day's</td>
+    <td>180</td>
+</tr>
+<tr>
+    <td>341</td>
+    <td>Microbiology</td>
+    <td>Stool for C/S(Stool C/S)</td>
+    <td>Stool</td>
+    <td>3-4 Day's</td>
+    <td>250</td>
+</tr>
+<tr>
+    <td>342</td>
+    <td>Microbiology</td>
+    <td>Swab for Culture and Sensitivity (Swab C/S)</td>
+    <td>Swab</td>
+    <td>3-4 Day's</td>
+    <td>250</td>
+</tr>
+<tr>
+    <td>343</td>
+    <td>Microbiology</td>
+    <td>Synovial Fluid for AFB Stain(Syno Fluid AFB)</td>
+    <td>Microbiology</td>
+    <td>02 Day's</td>
+    <td>180</td>
+</tr>
+<tr>
+    <td>344</td>
+    <td>Microbiology</td>
+    <td>Synovial Fluid for C/S(Syno Fluid C/S)</td>
+    <td>Microbiology</td>
+    <td>3-4 Day's</td>
+    <td>250</td>
+</tr>
+<tr>
+    <td>345</td>
+    <td>Microbiology</td>
+    <td>Synovial Fluid for Gram Stain(Syno Fluid Gm)</td>
+    <td>Microbiology</td>
+    <td>02 Day's</td>
+    <td>180</td>
+</tr>
+<tr>
+    <td>346</td>
+    <td>Microbiology</td>
+    <td>Throat Swab for C/S(Th. Swab C/S)</td>
+    <td>Swab</td>
+    <td>3-4 Day's</td>
+    <td>250</td>
+</tr>
+<tr>
+    <td>347</td>
+    <td>Microbiology</td>
+    <td>Throat Swab for Gram Stain(Th. Swab Gm)</td>
+    <td>Swab</td>
+    <td>02 Day's</td>
+    <td>180</td>
+</tr>
+<tr>
+    <td>348</td>
+    <td>Microbiology</td>
+    <td>Throat Swab for KLB Stain(Th. Swab KLB)</td>
+    <td>Swab</td>
+    <td>02 Day's</td>
+    <td>180</td>
+</tr>
+<tr>
+    <td>349</td>
+    <td>Microbiology</td>
+    <td>Tongue Swab For AFB Stain (Tongue For AFB)</td>
+    <td>Swab</td>
+    <td>02 Day's</td>
+    <td>180</td>
+</tr>
+<tr>
+    <td>350</td>
+    <td>Microbiology</td>
+    <td>Tongue Swab For C/S (Tongue Swab For C/S)</td>
+    <td>Swab</td>
+    <td>3-4 Day's</td>
+    <td>250</td>
+</tr>
+<tr>
+    <td>351</td>
+    <td>Microbiology</td>
+    <td>Tongue Swab For Gram Stain (Tongue For Gram Stain)</td>
+    <td>Swab</td>
+    <td>02 Day's</td>
+    <td>180</td>
+</tr>
+<tr>
+    <td>352</td>
+    <td>Microbiology</td>
+    <td>Tracheal Aspirate for C/S (TA. C/S)</td>
+    <td>Microbiology</td>
+    <td>3-4 Day's</td>
+    <td>250</td>
+</tr>
+<tr>
+    <td>353</td>
+    <td>Microbiology</td>
+    <td>Tracheal Aspirate for Gram AFB (Tracheal AFB)</td>
+    <td>Microbiology</td>
+    <td>02 Day's</td>
+    <td>180</td>
+</tr>
+<tr>
+    <td>354</td>
+    <td>Microbiology</td>
+    <td>Tracheal Aspirate for Gram Stain (Tracheal Gm)</td>
+    <td>Microbiology</td>
+    <td>02 Day's</td>
+    <td>180</td>
+</tr>
+<tr>
+    <td>355</td>
+    <td>Microbiology</td>
+    <td>Tracheostomy Tube Secretions For C/S - (Tracheostomy C/S)</td>
+    <td>Microbiology</td>
+    <td>3-4 Day's</td>
+    <td>250</td>
+</tr>
+<tr>
+    <td>356</td>
+    <td>Microbiology</td>
+    <td>Tube Tip for C/S (TT. C/S)</td>
+    <td>Tube Tip</td>
+    <td>3-4 Day's</td>
+    <td>250</td>
+</tr>
+<tr>
+    <td>357</td>
+    <td>Microbiology</td>
+    <td>Tube for C/S (Tube C/S)</td>
+    <td>Tube Tip</td>
+    <td>3-4 Day's</td>
+    <td>250</td>
+</tr>
+<tr>
+    <td>358</td>
+    <td>Microbiology</td>
+    <td>Umbilical Swab for C/S(Umb. Swab C/S)</td>
+    <td>Swab</td>
+    <td>3-4 Day's</td>
+    <td>250</td>
+</tr>
+<tr>
+    <td>359</td>
+    <td>Microbiology</td>
+    <td>Umbilical Swab for Gram Stain(Umbi. Swab Gm)</td>
+    <td>Swab</td>
+    <td>02 Day's</td>
+    <td>180</td>
+</tr>
+<tr>
+    <td>360</td>
+    <td>Microbiology</td>
+    <td>Urethral Discharge for AFB Stain(Ureth Discharge AFB)</td>
+    <td>Swab</td>
+    <td>02 Day's</td>
+    <td>180</td>
+</tr>
+<tr>
+    <td>361</td>
+    <td>Microbiology</td>
+    <td>Urethral Discharge for C/S(Ure.Dis C/S)</td>
+    <td>Swab</td>
+    <td>3-4 Day's</td>
+    <td>250</td>
+</tr>
+<tr>
+    <td>362</td>
+    <td>Microbiology</td>
+    <td>Urethral Discharge for Gram Stain(Ureth Discharge Gm)</td>
+    <td>Swab</td>
+    <td>02 Day's</td>
+    <td>180</td>
+</tr>
+<tr>
+    <td>363</td>
+    <td>Microbiology</td>
+    <td>Urine for AFB Stain(Urine AFB)</td>
+    <td>Urine</td>
+    <td>02 Day's</td>
+    <td>180</td>
+</tr>
+<tr>
+    <td>364</td>
+    <td>Microbiology</td>
+    <td>Urine for C/S(Urine C/S)</td>
+    <td>Urine</td>
+    <td>3-4 Day's</td>
+    <td>250</td>
+</tr>
+<tr>
+    <td>365</td>
+    <td>Microbiology</td>
+    <td>Urine for Gram Stain(Urine Gm)</td>
+    <td>Urine</td>
+    <td>02 Day's</td>
+    <td>180</td>
+</tr>
+<tr>
+    <td>366</td>
+    <td>Microbiology</td>
+    <td>Wound Swab for AFB Stain(Wound Swab AFB)</td>
+    <td>Swab</td>
+    <td>02 Day's</td>
+    <td>180</td>
+</tr>
+<tr>
+    <td>367</td>
+    <td>Microbiology</td>
+    <td>Wound Swab for C/S(Wound Swab C/S)</td>
+    <td>Swab</td>
+    <td>3-4 Day's</td>
+    <td>250</td>
+</tr>
+<tr>
+    <td>368</td>
+    <td>Microbiology</td>
+    <td>Wound Swab for Gram Stain(Wound Swab Gm)</td>
+    <td>Swab</td>
+    <td>02 Day's</td>
+    <td>180</td>
+</tr>
+<tr>
+    <td>369</td>
+    <td>Coagulation</td>
+    <td>Activated Partial Thromboplastin Time (APTT)</td>
+    <td>Plasma/sodium citrate/ Blue top tube</td>
+    <td>Same Day</td>
+    <td>300</td>
+</tr>
+<tr>
+    <td>370</td>
+    <td>Coagulation</td>
+    <td>Antiphospholipid Syndrome (APS)</td>
+    <td>Serum+Plama</td>
+    <td>03 Day's</td>
+    <td>8500</td>
+</tr>
+<tr>
+    <td>371</td>
+    <td>Coagulation</td>
+    <td>Bleeding Time (BT)</td>
+    <td>***</td>
+    <td>Same Day</td>
+    <td>200</td>
+</tr>
+<tr>
+    <td>372</td>
+    <td>Coagulation</td>
+    <td>Clotting Time (CT)</td>
+    <td>***</td>
+    <td>Same Day</td>
+    <td>200</td>
+</tr>
+<tr>
+    <td>373</td>
+    <td>Coagulation</td>
+    <td>D-Dimer (D-D)</td>
+    <td>Plasma / Light blue tube 1ml frogen citrated plasma.</td>
+    <td>Same Day</td>
+    <td>800</td>
+</tr>
+<tr>
+    <td>374</td>
+    <td>Coagulation</td>
+    <td>FDP- Fibrin Degradation Produc (FDP)</td>
+    <td>Plasma</td>
+    <td>Same Day</td>
+    <td>800</td>
+</tr>
+<tr>
+    <td>375</td>
+    <td>Coagulation</td>
+    <td>Factor IX (FIX)</td>
+    <td>Plasma</td>
+    <td>03 Day's</td>
+    <td>600</td>
+</tr>
+<tr>
+    <td>376</td>
+    <td>Coagulation</td>
+    <td>Factor-VII (F-VII)</td>
+    <td>Plasma</td>
+    <td>03 Day's</td>
+    <td>3200</td>
+</tr>
+<tr>
+    <td>377</td>
+    <td>Coagulation</td>
+    <td>Factor-VIII (Factor VIII)</td>
+    <td>Plasma</td>
+    <td>03 Day's</td>
+    <td>600</td>
+</tr>
+<tr>
+    <td>378</td>
+    <td>Coagulation</td>
+    <td>LUPUS ANTICOAGULANT TEST (LUPUS)</td>
+    <td>Plasma</td>
+    <td>03 Day's</td>
+    <td>2000</td>
+</tr>
+<tr>
+    <td>379</td>
+    <td>Coagulation</td>
+    <td>Lupus anticoagulant Panel (Lupas. Panel)</td>
+    <td>Plasma</td>
+    <td>03 Day's</td>
+    <td>3200</td>
+</tr>
+<tr>
+    <td>380</td>
+    <td>Coagulation</td>
+    <td>Plasma Fibrinogen (Fib)</td>
+    <td>Plasma</td>
+    <td>Same Day</td>
+    <td>500</td>
+</tr>
+<tr>
+    <td>381</td>
+    <td>Coagulation</td>
+    <td>Protein C (Pro-C)</td>
+    <td>Plasma</td>
+    <td>03 Day's</td>
+    <td>2500</td>
+</tr>
+<tr>
+    <td>382</td>
+    <td>Coagulation</td>
+    <td>Protein S (Pro-S)</td>
+    <td>Plasma</td>
+    <td>03 Day's</td>
+    <td>2500</td>
+</tr>
+<tr>
+    <td>383</td>
+    <td>Coagulation</td>
+    <td>Prothrombin Time (PT)</td>
+    <td>Plasma</td>
+    <td>Same Day</td>
+    <td>250</td>
+</tr>
+<tr>
+<td>385</td>
+<td>Immunochemistry</td>
+<td>25-OH Vitamin-D (25-OH-Vit-D)</td>
+<td>Serum+Red Tube</td>
+<td>Same Day</td>
+<td>1400</td>
+</tr>
+
+<tr>
+<td>386</td>
+<td>Immunochemistry</td>
+<td>ACTIVE VITAMIN B12 (ACTIVE-B-12)</td>
+<td>Serum+Red Tube</td>
+<td>5-7 Day's</td>
+<td>3300</td>
+</tr>
+
+<tr>
+<td>387</td>
+<td>Immunochemistry</td>
+<td>Adrenocorticotropic Hormone (ACTH)</td>
+<td>Whole Blood+Levender Tube</td>
+<td>02 Day's</td>
+<td>600</td>
+</tr>
+
+<tr>
+<td>388</td>
+<td>Immunochemistry</td>
+<td>Allergen-Specific IgE (Allergic P)</td>
+<td>Serum+Red Tube</td>
+<td>05 Day's</td>
+<td>5000</td>
+</tr>
+
+<tr>
+<td>389</td>
+<td>Immunochemistry</td>
+<td>Alpha-Fetoprotein (AFP)</td>
+<td>Serum+Red Tube</td>
+<td>Same Day</td>
+<td>500</td>
+</tr>
+
+<tr>
+<td>390</td>
+<td>Immunochemistry</td>
+<td>Anti Cardiolipin Antibody (ACarAb)</td>
+<td>Serum+Red Tube</td>
+<td>02 Day's</td>
+<td>1000</td>
+</tr>
+
+<tr>
+<td>391</td>
+<td>Immunochemistry</td>
+<td>Anti Mullerian Hormone (AMH)</td>
+<td>Serum+Red Tube</td>
+<td>Sun/Tue/Thu</td>
+<td>1500</td>
+</tr>
+
+<tr>
+<td>392</td>
+<td>Immunochemistry</td>
+<td>Anti Phospholipid Antibody IGG & IGM (Anti Phos IGG & IGM)</td>
+<td>Serum+Red Tube</td>
+<td>03 Day's</td>
+<td>1950</td>
+</tr>
+
+<tr>
+<td>393</td>
+<td>Immunochemistry</td>
+<td>Anti TSH Receptor Antibody (Anti TSH Recep)</td>
+<td>Serum+Red Tube</td>
+<td>02 Day's</td>
+<td>3000</td>
+</tr>
+
+<tr>
+<td>394</td>
+<td>Immunochemistry</td>
+<td>Anti phospholipid antibody (APhAb)</td>
+<td>Serum+Red Tube</td>
+<td>02 Day's</td>
+<td>1200</td>
+</tr>
+
+<tr>
+<td>395</td>
+<td>Immunochemistry</td>
+<td>Anti-Cardiolipin Ab IgG & IgM (Cardiolipin-Ab)</td>
+<td>Serum+Red Tube</td>
+<td>03 Day's</td>
+<td>1700</td>
+</tr>
+
+<tr>
+<td>396</td>
+<td>Immunochemistry</td>
+<td>Anti-Cyclic Citrullinated Peptide (Anti CCP)</td>
+<td>Serum+Red Tube</td>
+<td>Same Day</td>
+<td>750</td>
+</tr>
+
+<tr>
+<td>397</td>
+<td>Immunochemistry</td>
+<td>Anti-Streptolysin-O (ASO)</td>
+<td>Serum+Red Tube</td>
+<td>Same Day</td>
+<td>375</td>
+</tr>
+
+<tr>
+<td>398</td>
+<td>Immunochemistry</td>
+<td>Anti-Thyroglobulin (Anti-TG)</td>
+<td>Serum+Red Tube</td>
+<td>Same Day</td>
+<td>500</td>
+</tr>
+
+<tr>
+<td>399</td>
+<td>Immunochemistry</td>
+<td>Anti-Thyroid Peroxidase (Anti-TPO)</td>
+<td>Serum+Red Tube</td>
+<td>Same Day</td>
+<td>550</td>
+</tr>
+
+<tr>
+<td>400</td>
+<td>Immunochemistry</td>
+<td>Anti-ds DNA (A.ds.DNA)</td>
+<td>Serum+Red Tube</td>
+<td>Same Day</td>
+<td>800</td>
+</tr>
+
+<tr>
+<td>401</td>
+<td>Immunochemistry</td>
+<td>Antineutrophil Cytoplasmic Autoantibody, Cytoplasmic (C-ANCA)</td>
+<td>Serum+Red Tube</td>
+<td>03 Day's</td>
+<td>500</td>
+</tr>
+
+<tr>
+<td>402</td>
+<td>Immunochemistry</td>
+<td>Antinuclear Antibodies Factor (ANF)</td>
+<td>Serum+Red Tube</td>
+<td>05 Day's</td>
+<td>3750</td>
+</tr>
+<tr>
+<td>403</td>
+<td>Immunochemistry</td>
+<td>Antinuclear Antibody (ANA)</td>
+<td>Serum/Red Tube</td>
+<td>Same Day</td>
+<td>500</td>
+</tr>
+
+<tr>
+<td>404</td>
+<td>Immunochemistry</td>
+<td>Brain Natriuretic Peptide (BNP)</td>
+<td>Whole Blood/Levender Tube</td>
+<td>Same Day</td>
+<td>2000</td>
+</tr>
+
+<tr>
+<td>405</td>
+<td>Immunochemistry</td>
+<td>Cancer Antigen-125 (CA-125)</td>
+<td>Serum/Red Tube / Gel-barrier tube</td>
+<td>Same Day</td>
+<td>500</td>
+</tr>
+
+<tr>
+<td>406</td>
+<td>Immunochemistry</td>
+<td>Cancer Antigen-15.3 (CA 15-3)</td>
+<td>Serum/Red Tube / Gel-barrier tube</td>
+<td>Same Day</td>
+<td>500</td>
+</tr>
+
+<tr>
+<td>407</td>
+<td>Immunochemistry</td>
+<td>Cancer Antigen-19.9 (CA 19.9)</td>
+<td>Serum/Red Tube / Gel-barrier tube</td>
+<td>Same Day</td>
+<td>500</td>
+</tr>
+
+<tr>
+<td>408</td>
+<td>Immunochemistry</td>
+<td>Carcinoembryonic Antigen (CEA)</td>
+<td>Serum/Red Tube / Gel-barrier tube</td>
+<td>Same Day</td>
+<td>400</td>
+</tr>
+
+<tr>
+<td>409</td>
+<td>Immunochemistry</td>
+<td>Complement 3 (C3)</td>
+<td>Serum/Red Tube</td>
+<td>Same Day</td>
+<td>500</td>
+</tr>
+
+<tr>
+<td>410</td>
+<td>Immunochemistry</td>
+<td>Complement 4 (C4)</td>
+<td>Serum/Red Tube</td>
+<td>02 Day's</td>
+<td>500</td>
+</tr>
+
+<tr>
+<td>411</td>
+<td>Immunochemistry</td>
+<td>Cortisol (3-5 PM)</td>
+<td>Serum/Red Tube</td>
+<td>Same Day</td>
+<td>400</td>
+</tr>
+
+<tr>
+<td>412</td>
+<td>Immunochemistry</td>
+<td>Cortisol (7-9 AM)</td>
+<td>Serum/Red Tube</td>
+<td>Same Day</td>
+<td>400</td>
+</tr>
+
+<tr>
+<td>413</td>
+<td>Immunochemistry</td>
+<td>Cortisol (AM & PM)</td>
+<td>Serum/Red Tube</td>
+<td>Same Day</td>
+<td>800</td>
+</tr>
+
+<tr>
+<td>414</td>
+<td>Immunochemistry</td>
+<td>Estradiol (E2)</td>
+<td>Serum/Red Tube</td>
+<td>Same Day</td>
+<td>400</td>
+</tr>
+
+<tr>
+<td>415</td>
+<td>Immunochemistry</td>
+<td>Ferritin (Ferri)</td>
+<td>Serum/Red Tube</td>
+<td>Same Day</td>
+<td>500</td>
+</tr>
+
+<tr>
+<td>416</td>
+<td>Immunochemistry</td>
+<td>Folic Acid (F.A)</td>
+<td>Serum/Red Tube</td>
+<td>Same Day</td>
+<td>1000</td>
+</tr>
+
+<tr>
+<td>417</td>
+<td>Immunochemistry</td>
+<td>Follicle-Stimulating Hormone (FSH)</td>
+<td>Serum/Red Tube</td>
+<td>Same Day</td>
+<td>400</td>
+</tr>
+
+<tr>
+<td>418</td>
+<td>Immunochemistry</td>
+<td>Free Prostate-Specific Antigen (Free PSA)</td>
+<td>Serum/Red Tube</td>
+<td>02 Day's</td>
+<td>450</td>
+</tr>
+
+<tr>
+<td>419</td>
+<td>Immunochemistry</td>
+<td>Free Testosterone</td>
+<td>Serum/Red Tube</td>
+<td>Sun/Tue/Thu</td>
+<td>850</td>
+</tr>
+
+<tr>
+<td>420</td>
+<td>Immunochemistry</td>
+<td>Free beta HCG</td>
+<td>Serum/Red Tube</td>
+<td>5-7 Day's</td>
+<td>2000</td>
+</tr>
+
+<tr>
+<td>421</td>
+<td>Immunochemistry</td>
+<td>Free-Thyroxine (FT4)</td>
+<td>Serum/Red Tube</td>
+<td>Same Day</td>
+<td>350</td>
+</tr>
+
+<tr>
+<td>422</td>
+<td>Immunochemistry</td>
+<td>Free-Triiodothyronine (FT3)</td>
+<td>Serum/Red Tube</td>
+<td>Same Day</td>
+<td>350</td>
+</tr>
+
+<tr>
+<td>423</td>
+<td>Immunochemistry</td>
+<td>Growth Hormone (GH)</td>
+<td>Serum/Red Tube</td>
+<td>Sun/Tue/Thu</td>
+<td>650</td>
+</tr>
+
+<tr>
+<td>424</td>
+<td>Immunochemistry</td>
+<td>Immunoglobulin A (IgA)</td>
+<td>Serum/Red Tube</td>
+<td>02 Day's</td>
+<td>500</td>
+</tr>
+
+<tr>
+<td>425</td>
+<td>Immunochemistry</td>
+<td>Immunoglobulin G (IgG)</td>
+<td>Serum/Red Tube</td>
+<td>02 Day's</td>
+<td>500</td>
+</tr>
+
+<tr>
+<td>426</td>
+<td>Immunochemistry</td>
+<td>Immunoglobulin M (IgM)</td>
+<td>Serum/Red Tube</td>
+<td>02 Day's</td>
+<td>500</td>
+</tr>
+
+<tr>
+<td>427</td>
+<td>Immunochemistry</td>
+<td>Immunoglobulin-E (IgE)</td>
+<td>Serum/Red Tube</td>
+<td>Same Day</td>
+<td>400</td>
+</tr>
+
+<tr>
+<td>428</td>
+<td>Immunochemistry</td>
+<td>Insulin</td>
+<td>Serum/Red Tube</td>
+<td>Sun/Tue/Thu</td>
+<td>650</td>
+</tr>
+
+<tr>
+<td>429</td>
+<td>Immunochemistry</td>
+<td>Insulin Like Growth Factor (IGF-1)</td>
+<td>Serum/Red Tube</td>
+<td>03 Day's</td>
+<td>3900</td>
+</tr>
+
+<tr>
+<td>430</td>
+<td>Immunochemistry</td>
+<td>Interleukin-6 (IL-6)</td>
+<td>Serum/Red Tube</td>
+<td>03 Day's</td>
+<td>3000</td>
+</tr>
+
+<tr>
+<td>431</td>
+<td>Immunochemistry</td>
+<td>Luteinizing Hormone (LH)</td>
+<td>Serum/Red Tube</td>
+<td>Same Day</td>
+<td>400</td>
+</tr>
+
+<tr>
+<td>432</td>
+<td>Immunochemistry</td>
+<td>LH-FSH Ratio</td>
+<td>Serum/Red Tube</td>
+<td>Same Day</td>
+<td>1000</td>
+</tr>
+
+<tr>
+<td>433</td>
+<td>Immunochemistry</td>
+<td>NT-Pro-BNP</td>
+<td>Whole Blood/Levender Tube</td>
+<td>Same Day</td>
+<td>1500</td>
+</tr>
+
+<tr>
+<td>434</td>
+<td>Immunochemistry</td>
+<td>Parathyroid Hormone (PTH)</td>
+<td>Serum/Red Tube</td>
+<td>Same Day</td>
+<td>600</td>
+</tr>
+
+<tr>
+<td>435</td>
+<td>Immunochemistry</td>
+<td>P-ANCA</td>
+<td>Serum/Red Tube</td>
+<td>03 Day's</td>
+<td>500</td>
+</tr>
+
+<tr>
+<td>436</td>
+<td>Immunochemistry</td>
+<td>Prolactin (PRL)</td>
+<td>Serum/Red Tube</td>
+<td>Same Day</td>
+<td>400</td>
+</tr>
+
+<tr>
+<td>437</td>
+<td>Immunochemistry</td>
+<td>Total PSA</td>
+<td>Serum/Red Tube</td>
+<td>Same Day</td>
+<td>480</td>
+</tr>
+
+<tr>
+<td>438</td>
+<td>Immunochemistry</td>
+<td>Testosterone</td>
+<td>Serum/Red Tube</td>
+<td>Same Day</td>
+<td>400</td>
+</tr>
+
+<tr>
+<td>439</td>
+<td>Immunochemistry</td>
+<td>Thalassemia-Beta-Mutation-Analysis (TBMA)</td>
+<td>Serum/Red Tube</td>
+<td>03 Day's</td>
+<td>10500</td>
+</tr>
+
+<tr>
+<td>440</td>
+<td>Immunochemistry</td>
+<td>Thyroid Function Test (TFT)</td>
+<td>Serum/Red Tube</td>
+<td>Same Day</td>
+<td>1025</td>
+</tr>
+
+<tr>
+<td>441</td>
+<td>Immunochemistry</td>
+<td>Thyroid-Stimulating Hormone (TSH)</td>
+<td>Serum/Red Tube</td>
+<td>Same Day</td>
+<td>300</td>
+</tr>
+
+<tr>
+<td>442</td>
+<td>Immunochemistry</td>
+<td>Thyroxine (T4)</td>
+<td>Serum/Red Tube</td>
+<td>Same Day</td>
+<td>300</td>
+</tr>
+
+<tr>
+<td>443</td>
+<td>Immunochemistry</td>
+<td>Total HCG</td>
+<td>Serum/Red Tube</td>
+<td>Same Day</td>
+<td>470</td>
+</tr>
+
+<tr>
+<td>444</td>
+<td>Immunochemistry</td>
+<td>Troponin I (cTnI)</td>
+<td>Serum/Red Tube</td>
+<td>Same Day</td>
+<td>550</td>
+</tr>
+
+<tr>
+<td>445</td>
+<td>Immunochemistry</td>
+<td>Vitamin B12</td>
+<td>Serum/Red Tube</td>
+<td>Same Day</td>
+<td>800</td>
+</tr>
+<tr>
+<td>446</td>
+<td>Serology</td>
+<td>Anti Chlamydial IgG (Anti-CLM)</td>
+<td>Serum/Red Tube</td>
+<td>Suterday</td>
+<td>600</td>
+</tr>
+
+<tr>
+<td>447</td>
+<td>Serology</td>
+<td>Anti Hepatitis-B Virus E Antigen(Anti-HBe)</td>
+<td>Serum/Red Tube</td>
+<td>Same Day</td>
+<td>400</td>
+</tr>
+
+<tr>
+<td>448</td>
+<td>Serology</td>
+<td>Anti Hepatitis-C Virus(Anti-HCV)</td>
+<td>Serum/Red Tube</td>
+<td>Same Day</td>
+<td>400</td>
+</tr>
+
+<tr>
+<td>449</td>
+<td>Serology</td>
+<td>Anti TB IgG (TB IgG)</td>
+<td>Serum/Red Tube</td>
+<td>05 Day's</td>
+<td>700</td>
+</tr>
+
+<tr>
+<td>450</td>
+<td>Serology</td>
+<td>Anti-Cytomegalovirus IgG (Anti-CMV IgG)</td>
+<td>Serum/Red Tube</td>
+<td>02 Day's</td>
+<td>500</td>
+</tr>
+
+<tr>
+<td>451</td>
+<td>Serology</td>
+<td>Anti-Cytomegalovirus IgM (Anti-CMV IgM)</td>
+<td>Serum/Red Tube</td>
+<td>02 Day's</td>
+<td>500</td>
+</tr>
+
+<tr>
+<td>452</td>
+<td>Serology</td>
+<td>Anti-Dengue IgG(Dengue IgG)</td>
+<td>Serum/Red Tube</td>
+<td>Same Day</td>
+<td>300</td>
+</tr>
+
+<tr>
+<td>453</td>
+<td>Serology</td>
+<td>Anti-Dengue IgM(Dengue IgM)</td>
+<td>Serum/Red Tube</td>
+<td>Same Day</td>
+<td>500</td>
+</tr>
+
+<tr>
+<td>454</td>
+<td>Serology</td>
+<td>Anti-H. Pylori IgG(H. Pylori IgG)</td>
+<td>Serum/Red Tube</td>
+<td>Same Day</td>
+<td>500</td>
+</tr>
+
+<tr>
+<td>455</td>
+<td>Serology</td>
+<td>Anti-Rubella IgG (Rubella IgG)</td>
+<td>Serum/Red Tube</td>
+<td>02 Day's</td>
+<td>500</td>
+</tr>
+
+<tr>
+<td>456</td>
+<td>Serology</td>
+<td>Anti-Rubella IgM (Rubella IgM)</td>
+<td>Serum/Red Tube</td>
+<td>02 Day's</td>
+<td>500</td>
+</tr>
+
+<tr>
+<td>457</td>
+<td>Serology</td>
+<td>Anti-TB IgA (TB IgA)</td>
+<td>Serum/Red Tube</td>
+<td>05 Day's</td>
+<td>700</td>
+</tr>
+
+<tr>
+<td>458</td>
+<td>Serology</td>
+<td>Anti-TB IgM (TB IgM)</td>
+<td>Serum/Red Tube</td>
+<td>05 Day's</td>
+<td>700</td>
+</tr>
+
+<tr>
+<td>459</td>
+<td>Serology</td>
+<td>Anti-Toxoplasma IgG (Anti-Toxo IgG)</td>
+<td>Serum/Red Tube</td>
+<td>02 Day's</td>
+<td>500</td>
+</tr>
+
+<tr>
+<td>460</td>
+<td>Serology</td>
+<td>Anti-Toxoplasma IgM (Anti-Toxo IgM)</td>
+<td>Serum/Red Tube</td>
+<td>02 Day's</td>
+<td>500</td>
+</tr>
+
+<tr>
+<td>461</td>
+<td>Serology</td>
+<td>Coomb's Test(Coomb's)</td>
+<td>Serum+Whole Blood</td>
+<td>Same Day</td>
+<td>250</td>
+</tr>
+
+<tr>
+<td>462</td>
+<td>Serology</td>
+<td>Dengue Antibodies (IgG & IgM)</td>
+<td>Serum/Red Tube</td>
+<td>Same Day</td>
+<td>300</td>
+</tr>
+
+<tr>
+<td>463</td>
+<td>Serology</td>
+<td>Dengue NS1 Antigen(NS1 Antigen)</td>
+<td>Serum/Red Tube</td>
+<td>Same Day</td>
+<td>300</td>
+</tr>
+
+<tr>
+<td>464</td>
+<td>Serology</td>
+<td>Ena Profile (EP) (OT)</td>
+<td>Serum/Red Tube</td>
+<td>05 Day's</td>
+<td>6500</td>
+</tr>
+
+<tr>
+<td>465</td>
+<td>Serology</td>
+<td>Hepatitis-A IgM Antibody(Anti-HAV IgM)</td>
+<td>Serum/Red Tube</td>
+<td>Same Day</td>
+<td>450</td>
+</tr>
+
+<tr>
+<td>466</td>
+<td>Serology</td>
+<td>Hepatitis-B Core Total Antibody(Anti-HBc Total)</td>
+<td>Serum/Red Tube</td>
+<td>Same Day</td>
+<td>450</td>
+</tr>
+
+<tr>
+<td>467</td>
+<td>Serology</td>
+<td>Hepatitis-B Surface Antigen(HBsAg)</td>
+<td>Serum/Red Tube</td>
+<td>Same Day</td>
+<td>300</td>
+</tr>
+
+<tr>
+<td>468</td>
+<td>Serology</td>
+<td>Hepatitis-B Surface Antibody(Anti-HBs)</td>
+<td>Serum/Red Tube</td>
+<td>Same Day</td>
+<td>420</td>
+</tr>
+
+<tr>
+<td>469</td>
+<td>Serology</td>
+<td>Hepatitis-B Virus E Antigen(HBeAg)</td>
+<td>Serum/Red Tube</td>
+<td>Same Day</td>
+<td>380</td>
+</tr>
+
+<tr>
+<td>470</td>
+<td>Serology</td>
+<td>Hepatitis-E Virus IgM Antibody(Anti-HEV IgM)</td>
+<td>Serum/Red Tube</td>
+<td>Same Day</td>
+<td>450</td>
+</tr>
+
+<tr>
+<td>471</td>
+<td>Serology</td>
+<td>Herpes Simplex Virus-1&2 IgM (HSV 1&2 IgM)</td>
+<td>Serum/Red Tube</td>
+<td>02 Day's</td>
+<td>500</td>
+</tr>
+<tr>
+    <td>472</td>
+    <td>Serology</td>
+    <td>Herpes Simplex Virus-I &2 IgG (HSV IgG)</td>
+    <td>Serum+Red Tube</td>
+    <td>02 Day's</td>
+    <td>500</td>
+</tr>
+
+<tr>
+    <td>473</td>
+    <td>Serology</td>
+    <td>Herpes Simplex Virus-I, IgG (HSV-I, IgG)</td>
+    <td>Serum+Red Tube</td>
+    <td>02 Day's</td>
+    <td>600</td>
+</tr>
+
+<tr>
+    <td>474</td>
+    <td>Serology</td>
+    <td>Herpes Simplex Virus-I, IgM (HSV-I, IgM)</td>
+    <td>Serum+Red Tube</td>
+    <td>02 Day's</td>
+    <td>600</td>
+</tr>
+
+<tr>
+    <td>475</td>
+    <td>Serology</td>
+    <td>Herpes Simplex Virus-II, IgG (HSV-II, IgG)</td>
+    <td>Serum+Red Tube</td>
+    <td>02 Day's</td>
+    <td>600</td>
+</tr>
+
+<tr>
+    <td>476</td>
+    <td>Serology</td>
+    <td>Herpes Simplex Virus-II, IgM (HSV-II, IgM)</td>
+    <td>Serum+Red Tube</td>
+    <td>02 Day's</td>
+    <td>600</td>
+</tr>
+
+<tr>
+    <td>477</td>
+    <td>Serology</td>
+    <td>Human Immunodeficiency Virus-HIV-1&2 (HIV)</td>
+    <td>Serum+Red Tube</td>
+    <td>02 Day's</td>
+    <td>400</td>
+</tr>
+
+<tr>
+    <td>478</td>
+    <td>Serology</td>
+    <td>ICT for Chikungunya (ICT-Chikungunya)</td>
+    <td>Serum+Red Tube</td>
+    <td>Same Day</td>
+    <td>500</td>
+</tr>
+
+<tr>
+    <td>479</td>
+    <td>Serology</td>
+    <td>ICT for Filaria (ICT-Filaria)</td>
+    <td>Serum+Red Tube</td>
+    <td>Same Day</td>
+    <td>400</td>
+</tr>
+
+<tr>
+    <td>480</td>
+    <td>Serology</td>
+    <td>ICT for Kala Azar (ICT- Kala Azar)</td>
+    <td>Serum+Red Tube</td>
+    <td>Same Day</td>
+    <td>400</td>
+</tr>
+
+<tr>
+    <td>481</td>
+    <td>Serology</td>
+    <td>ICT for Malaria (ICT-Malaria)</td>
+    <td>Whole Blood+Levender Tube</td>
+    <td>Same Day</td>
+    <td>400</td>
+</tr>
+
+<tr>
+    <td>482</td>
+    <td>Serology</td>
+    <td>ICT for TB (Tuberculosis) (ICT-TB)</td>
+    <td>Serum+Red Tube</td>
+    <td>Same Day</td>
+    <td>400</td>
+</tr>
+
+<tr>
+    <td>483</td>
+    <td>Serology</td>
+    <td>QUANTIFERON - TB Gold Plus (TB Gold)</td>
+    <td>Lithium Heparin Tube</td>
+    <td>05 Day's</td>
+    <td>5500</td>
+</tr>
+
+<tr>
+    <td>484</td>
+    <td>Serology</td>
+    <td>Rh-Antibody Titre (Rh Ab Titre)</td>
+    <td>Serum+Red Tube</td>
+    <td>Same Day</td>
+    <td>350</td>
+</tr>
+
+<tr>
+    <td>485</td>
+    <td>Serology</td>
+    <td>Torch Panel (Torch)</td>
+    <td>Serum+Red Tube</td>
+    <td>02 Day's</td>
+    <td>4000</td>
+</tr>
+
+<tr>
+    <td>486</td>
+    <td>Serology</td>
+    <td>Treponema Pallidum Haemagglutination (Q & Q) (TPHA)</td>
+    <td>Serum+Red Tube</td>
+    <td>Same Day</td>
+    <td>500</td>
+</tr>
+
+<tr>
+    <td>487</td>
+    <td>Serology</td>
+    <td>Treponema Pallidum Haemagglutination (TPHA)</td>
+    <td>Serum+Red Tube</td>
+    <td>Same Day</td>
+    <td>400</td>
+</tr>
+
+<tr>
+    <td>488</td>
+    <td>Serology</td>
+    <td>Triple Antigen (Tri. Antigen)</td>
+    <td>Serum+Red Tube</td>
+    <td>Same Day</td>
+    <td>400</td>
+</tr>
+
+<tr>
+    <td>489</td>
+    <td>Serology</td>
+    <td>Typhoid and Paratyphoid Test (WIDAL)</td>
+    <td>Serum+Red Tube</td>
+    <td>Same Day</td>
+    <td>300</td>
+</tr>
+
+<tr>
+    <td>490</td>
+    <td>Serology</td>
+    <td>Venereal Disease Research Laboratory (VDRL - Q&Q)</td>
+    <td>Serum+Red Tube</td>
+    <td>Same Day</td>
+    <td>300</td>
+</tr>
+
+<tr>
+    <td>491</td>
+    <td>Serology</td>
+    <td>Venereal Disease Research Laboratory (VDRL)</td>
+    <td>Serum+Red Tube</td>
+    <td>Same Day</td>
+    <td>300</td>
+</tr>
+
+<tr>
+    <td>492</td>
+    <td>Serology</td>
+    <td>Hepatitis-B Core IgM (Anti-HBc IgM)</td>
+    <td>Serum+Red Tube</td>
+    <td>Same Day</td>
+    <td>450</td>
+</tr>
+<tr>
+<td>493</td>
+<td>Cytology</td>
+<td>Ascitic fluid for cytology (Ascitic fluid cyto)</td>
+<td>Cytology</td>
+<td>03 Day's</td>
+<td>250</td>
+</tr>
+
+<tr>
+<td>494</td>
+<td>Cytology</td>
+<td>Ascitic fluid for malignant cell (Ascitic malig.cell)</td>
+<td>Cytology</td>
+<td>03 Day's</td>
+<td>550</td>
+</tr>
+
+<tr>
+<td>495</td>
+<td>Cytology</td>
+<td>Aspirate Fluid For Cytology (Asp Cyto)</td>
+<td>Cytology</td>
+<td>03 Day's</td>
+<td>250</td>
+</tr>
+
+<tr>
+<td>496</td>
+<td>Cytology</td>
+<td>Aspirate Fluid For Malignant cell (Asp Malig)</td>
+<td>Cytology</td>
+<td>03 Day's</td>
+<td>550</td>
+</tr>
+
+<tr>
+<td>497</td>
+<td>Cytology</td>
+<td>Bronchoalveolar lavage for Cytology (Bal. Cyto)</td>
+<td>Cytology</td>
+<td>03 Day's</td>
+<td>250</td>
+</tr>
+
+<tr>
+<td>498</td>
+<td>Cytology</td>
+<td>Bronchoalveolar lavage for Malignant (Bal. Malig)</td>
+<td>Cytology</td>
+<td>03 Day's</td>
+<td>550</td>
+</tr>
+
+<tr>
+<td>499</td>
+<td>Cytology</td>
+<td>CSF for malignant cell</td>
+<td>Cytology</td>
+<td>03 Day's</td>
+<td>550</td>
+</tr>
+
+<tr>
+<td>500</td>
+<td>Cytology</td>
+<td>Cerebrospinal Fluid for Cytology (CSF Cyto)</td>
+<td>Cytology</td>
+<td>03 Day's</td>
+<td>250</td>
+</tr>
+
+<tr>
+<td>501</td>
+<td>Cytology</td>
+<td>Cervical Fluid for cytology (Cer. Cyto)</td>
+<td>Cytology</td>
+<td>03 Day's</td>
+<td>250</td>
+</tr>
+
+<tr>
+<td>502</td>
+<td>Cytology</td>
+<td>Cervical Fluid for malignant cells (Cer. Malig)</td>
+<td>Cytology</td>
+<td>03 Day's</td>
+<td>550</td>
+</tr>
+
+<tr>
+<td>503</td>
+<td>Cytology</td>
+<td>Cystic Fluid For Cytology (Cystic Cyto)</td>
+<td>Cytology</td>
+<td>03 Day's</td>
+<td>250</td>
+</tr>
+
+<tr>
+<td>504</td>
+<td>Cytology</td>
+<td>Cystic Fluid For Malignant cell (Cystic Malig)</td>
+<td>Cytology</td>
+<td>03 Day's</td>
+<td>550</td>
+</tr>
+
+<tr>
+<td>505</td>
+<td>Cytology</td>
+<td>Cytology of Body Fluid (BF.Cytology)</td>
+<td>Cytology</td>
+<td>03 Day's</td>
+<td>250</td>
+</tr>
+
+<tr>
+<td>506</td>
+<td>Cytology</td>
+<td>Cytology of Pap Smear (Pep. cyto)</td>
+<td>Cytology</td>
+<td>03 Day's</td>
+<td>400</td>
+</tr>
+
+<tr>
+<td>507</td>
+<td>Cytology</td>
+<td>Cytology of Pap's Smear (LBC)</td>
+<td>Cytology</td>
+<td>03 Day's</td>
+<td>600</td>
+</tr>
+
+<tr>
+<td>508</td>
+<td>Cytology</td>
+<td>Fine-Needle Aspiration Cytology (FNAC)</td>
+<td>Cytology</td>
+<td>03 Day's</td>
+<td>500</td>
+</tr>
+
+<tr>
+<td>509</td>
+<td>Cytology</td>
+<td>Fine-Needle Aspiration Cytology (both breasts) (FNAC - Both Br)</td>
+<td>Cytology</td>
+<td>03 Day's</td>
+<td>1200</td>
+</tr>
+
+<tr>
+<td>510</td>
+<td>Cytology</td>
+<td>Fine-Needle Aspiration Cytology (left breast) (FNAC - Lt.Br)</td>
+<td>Cytology</td>
+<td>03 Day's</td>
+<td>600</td>
+</tr>
+
+<tr>
+<td>511</td>
+<td>Cytology</td>
+<td>Fine-Needle Aspiration Cytology (right breast) (FNAC - Rt.Br)</td>
+<td>Cytology</td>
+<td>03 Day's</td>
+<td>600</td>
+</tr>
+
+<tr>
+<td>512</td>
+<td>Cytology</td>
+<td>Flow cytometry for CD-55 and CD-59 (CD-55 & 59)</td>
+<td>Cytology</td>
+<td>03 Day's</td>
+<td>9500</td>
+</tr>
+
+<tr>
+<td>513</td>
+<td>Cytology</td>
+<td>Joint fluid for cytology (Joint fluid cyto.)</td>
+<td>Cytology</td>
+<td>03 Day's</td>
+<td>250</td>
+</tr>
+
+<tr>
+<td>514</td>
+<td>Cytology</td>
+<td>Joint fluid for malignant cell (Joint fluid malig.cell)</td>
+<td>Cytology</td>
+<td>03 Day's</td>
+<td>550</td>
+</tr>
+
+<tr>
+<td>515</td>
+<td>Cytology</td>
+<td>Miscellaneous Malignant cell (MMC)</td>
+<td>Cytology</td>
+<td>03 Day's</td>
+<td>550</td>
+</tr>
+
+<tr>
+<td>516</td>
+<td>Cytology</td>
+<td>Nipple discharge for cytology (Nipple cyto)</td>
+<td>Cytology</td>
+<td>03 Day's</td>
+<td>250</td>
+</tr>
+
+<tr>
+<td>517</td>
+<td>Cytology</td>
+<td>Ovarian Cyst For Cytology (Ov.Cyst.Cyto)</td>
+<td>Cytology</td>
+<td>03 Day's</td>
+<td>250</td>
+</tr>
+
+<tr>
+<td>518</td>
+<td>Cytology</td>
+<td>Ovarian Cyst For for Malignant (Ov.Cyst. Malig)</td>
+<td>Cytology</td>
+<td>03 Day's</td>
+<td>550</td>
+</tr>
+
+<tr>
+<td>519</td>
+<td>Cytology</td>
+<td>Pericardial Fluid for Cytology (Pericar Fluid Cyto)</td>
+<td>Cytology</td>
+<td>03 Day's</td>
+<td>250</td>
+</tr>
+
+<tr>
+<td>520</td>
+<td>Cytology</td>
+<td>Pericardial fluid for malignant cell (Pericardial malig.cell)</td>
+<td>Cytology</td>
+<td>03 Day's</td>
+<td>550</td>
+</tr>
+
+<tr>
+<td>521</td>
+<td>Cytology</td>
+<td>Peritoneal Fluid For Malignant Cell (Perito. fluid malig.cell)</td>
+<td>Cytology</td>
+<td>03 Day's</td>
+<td>550</td>
+</tr>
+
+<tr>
+<td>522</td>
+<td>Cytology</td>
+<td>Peritoneal Fluid for Cytology (Perito Fluid Cyto)</td>
+<td>Cytology</td>
+<td>03 Day's</td>
+<td>250</td>
+</tr>
+
+<tr>
+<td>523</td>
+<td>Cytology</td>
+<td>Peritoneal Fluid for Malignant (Peri.T. Malig)</td>
+<td>Cytology</td>
+<td>03 Day's</td>
+<td>550</td>
+</tr>
+
+<tr>
+<td>524</td>
+<td>Cytology</td>
+<td>Pleural Fluid for Cytology (Pleu Fluid Cyto)</td>
+<td>Cytology</td>
+<td>03 Day's</td>
+<td>250</td>
+</tr>
+
+<tr>
+<td>525</td>
+<td>Cytology</td>
+<td>Pleural fluid for malignant cells (PFFMC)</td>
+<td>Cytology</td>
+<td>03 Day's</td>
+<td>550</td>
+</tr>
+
+<tr>
+<td>526</td>
+<td>Cytology</td>
+<td>Pus For Cytology (Pus Cyto)</td>
+<td>Cytology</td>
+<td>03 Day's</td>
+<td>250</td>
+</tr>
+
+<tr>
+<td>527</td>
+<td>Cytology</td>
+<td>Spinal Fluid For Cytology (Spinal Cyto)</td>
+<td>Cytology</td>
+<td>03 Day's</td>
+<td>250</td>
+</tr>
+
+<tr>
+<td>528</td>
+<td>Cytology</td>
+<td>Spinal Fluid For Malignant cell (Spinal Malig)</td>
+<td>Cytology</td>
+<td>03 Day's</td>
+<td>550</td>
+</tr>
+
+<tr>
+<td>529</td>
+<td>Cytology</td>
+<td>Sputum For Malignant Cell (Sputum malig.cell)</td>
+<td>Cytology</td>
+<td>03 Day's</td>
+<td>550</td>
+</tr>
+
+<tr>
+<td>530</td>
+<td>Cytology</td>
+<td>Synovial Fluid for Cytology (Syno Fluid Cyto)</td>
+<td>Cytology</td>
+<td>03 Day's</td>
+<td>250</td>
+</tr>
+
+<tr>
+<td>531</td>
+<td>Cytology</td>
+<td>Synovial fluid malignant cell (Syno. fluid malig.cell)</td>
+<td>Cytology</td>
+<td>03 Day's</td>
+<td>550</td>
+</tr>
+
+<tr>
+<td>532</td>
+<td>Cytology</td>
+<td>Tounge scrapping for malignant cell (Tounge scrap. malig.cell)</td>
+<td>Cytology</td>
+<td>03 Day's</td>
+<td>550</td>
+</tr>
+
+<tr>
+<td>533</td>
+<td>Cytology</td>
+<td>Urine for Cytology (Urine Cyto)</td>
+<td>Cytology</td>
+<td>03 Day's</td>
+<td>250</td>
+</tr>
+
+<tr>
+<td>534</td>
+<td>Cytology</td>
+<td>Urine for malignant cell (U.malignant cell)</td>
+<td>Cytology</td>
+<td>03 Day's</td>
+<td>550</td>
+</tr>
+<tr>
+    <td>535</td>
+    <td>PCR Diagnostic</td>
+    <td>CSF For GenXpert (CSF GenXpert)</td>
+    <td>PCR Diagnostic</td>
+    <td>3-5 Day's</td>
+    <td>5500</td>
+</tr>
+
+<tr>
+    <td>536</td>
+    <td>PCR Diagnostic</td>
+    <td>GenXpert (G-Xpert)</td>
+    <td>Stool/Fluid/Sputum</td>
+    <td>3-5 Day's</td>
+    <td>4200</td>
+</tr>
+
+<tr>
+    <td>537</td>
+    <td>PCR Diagnostic</td>
+    <td>HCV Genotyping (HCV Geno)</td>
+    <td>Whole Blood + Serum</td>
+    <td>3-5 Day's</td>
+    <td>9000</td>
+</tr>
+
+<tr>
+    <td>538</td>
+    <td>PCR Diagnostic</td>
+    <td>HLA-B27 (HLA-B27)</td>
+    <td>Whole Blood/Levender Tube</td>
+    <td>03 Day's</td>
+    <td>1700</td>
+</tr>
+
+<tr>
+    <td>539</td>
+    <td>PCR Diagnostic</td>
+    <td>Hepatitis B Viral DNA (HBV DNA)</td>
+    <td>Whole Blood/Levender Tube</td>
+    <td>3-5 Day's</td>
+    <td>3800</td>
+</tr>
+
+<tr>
+    <td>540</td>
+    <td>PCR Diagnostic</td>
+    <td>Hepatitis C Viral RNA (HCV RNA)</td>
+    <td>Whole Blood/Levender Tube</td>
+    <td>3-5 Day's</td>
+    <td>4700</td>
+</tr>
+
+<tr>
+    <td>541</td>
+    <td>PCR Diagnostic</td>
+    <td>Human Papilloma Virus (HPV)-19 High-Risk Types (HPV High-Risk Types)</td>
+    <td>Cervical Swab</td>
+    <td>3-5 Day's</td>
+    <td>2660</td>
+</tr>
+
+<tr>
+    <td>542</td>
+    <td>PCR Diagnostic</td>
+    <td>Karyotyping (Karyotyping)</td>
+    <td>Lithium Heparine Tube</td>
+    <td>3-5 Day's</td>
+    <td>5500</td>
+</tr>
+
+<tr>
+    <td>543</td>
+    <td>PCR Diagnostic</td>
+    <td>MTB-PCR (MTB)</td>
+    <td>PCR Diagnostic</td>
+    <td>3-5 Day's</td>
+    <td>5000</td>
+</tr>
+
+<tr>
+    <td>544</td>
+    <td>PCR Diagnostic</td>
+    <td>Stool GenXpert (Stool GenXpert)</td>
+    <td>Stool</td>
+    <td>3-5 Day's</td>
+    <td>5500</td>
+</tr>
+
+<tr>
+    <td>545</td>
+    <td>PCR Diagnostic</td>
+    <td>Urine For CMV- PCR Qualitative (CMV-Qualitative)</td>
+    <td>Urine</td>
+    <td>3-5 Day's</td>
+    <td>6000</td>
+</tr>
+
+<tr>
+    <td>546</td>
+    <td>PCR Diagnostic</td>
+    <td>Urine For CMV- PCR Quantitative (CMV-Quantitative)</td>
+    <td>Urine</td>
+    <td>3-5 Day's</td>
+    <td>8000</td>
+</tr>
+<tr>
+<td>547</td>
+<td>Drug Screning</td>
+<td>Amphetamine (Quantitative) (Amp-Q)</td>
+<td>Urine</td>
+<td>02 Day's</td>
+<td>650</td>
+</tr>
+
+<tr>
+<td>548</td>
+<td>Drug Screning</td>
+<td>Amphetamine(Amphe.)</td>
+<td>Urine</td>
+<td>Same Day</td>
+<td>500</td>
+</tr>
+
+<tr>
+<td>549</td>
+<td>Drug Screning</td>
+<td>Benzodiazepine (Benzo.)</td>
+<td>Urine</td>
+<td>Same Day</td>
+<td>500</td>
+</tr>
+
+<tr>
+<td>550</td>
+<td>Drug Screning</td>
+<td>Benzodiazepine (Quantitative) (Ben-Q)</td>
+<td>Urine</td>
+<td>02 Day's</td>
+<td>650</td>
+</tr>
+
+<tr>
+<td>551</td>
+<td>Drug Screning</td>
+<td>Cannabinoid (Quantitative) (Can-Q)</td>
+<td>Urine</td>
+<td>02 Day's</td>
+<td>650</td>
+</tr>
+
+<tr>
+<td>552</td>
+<td>Drug Screning</td>
+<td>Cannabinoids(Cannabi)</td>
+<td>Urine</td>
+<td>Same Day</td>
+<td>500</td>
+</tr>
+
+<tr>
+<td>553</td>
+<td>Drug Screning</td>
+<td>Cocaine(Coca)</td>
+<td>Urine</td>
+<td>Same Day</td>
+<td>500</td>
+</tr>
+
+<tr>
+<td>554</td>
+<td>Drug Screning</td>
+<td>ETHYL ALCOHOL (E-ALCOHOL)</td>
+<td>Serum/Red Tube</td>
+<td>03 Day's</td>
+<td>1500</td>
+</tr>
+
+<tr>
+<td>555</td>
+<td>Drug Screning</td>
+<td>Marijuana (Marj)</td>
+<td>Urine</td>
+<td>Same Day</td>
+<td>500</td>
+</tr>
+
+<tr>
+<td>556</td>
+<td>Drug Screning</td>
+<td>Metanephrine (Meta)</td>
+<td>Serum/Red Tube</td>
+<td>5-7 Day's</td>
+<td>12000</td>
+</tr>
+
+<tr>
+<td>557</td>
+<td>Drug Screning</td>
+<td>Morphine (Morp)</td>
+<td>Urine</td>
+<td>Same Day</td>
+<td>500</td>
+</tr>
+
+<tr>
+<td>558</td>
+<td>Drug Screning</td>
+<td>Opiates (Quantitative) (Opi-Q)</td>
+<td>Urine</td>
+<td>02 Day's</td>
+<td>650</td>
+</tr>
+
+<tr>
+<td>559</td>
+<td>Drug Screning</td>
+<td>Opiates(OPI)</td>
+<td>Urine</td>
+<td>Same Day</td>
+<td>500</td>
+</tr>
+
+<tr>
+<td>560</td>
+<td>Drug Screning</td>
+<td>Phenobarbital (Phenobarbit)</td>
+<td>Urine</td>
+<td>02 Day's</td>
+<td>600</td>
+</tr>
+<tr>
+<td>561</td>
+<td>Drug Screning</td>
+<td>AML MRD (OT)</td>
+<td>Serum/Red Tube</td>
+<td>5-7 Day's</td>
+<td>21000</td>
+</tr>
+
+<tr>
+<td>562</td>
+<td>Drug Screning</td>
+<td>ANDROGEN (Androgen)</td>
+<td>Serum/Red Tube</td>
+<td>5-7 Day's</td>
+<td>4080</td>
+</tr>
+
+<tr>
+<td>563</td>
+<td>Drug Screning</td>
+<td>ANTI-NEUROMYELITIS OPTICA ANTIBODY (NMO)</td>
+<td>Serum/Red Tube</td>
+<td>5-7 Day's</td>
+<td>8850</td>
+</tr>
+
+<tr>
+<td>564</td>
+<td>Drug Screning</td>
+<td>Acetylcholine Receptor Antibody (ACHR)</td>
+<td>Serum/Red Tube</td>
+<td>5-7 Day's</td>
+<td>6500</td>
+</tr>
+
+<tr>
+<td>565</td>
+<td>Drug Screning</td>
+<td>Androstenedione (Andros)</td>
+<td>Serum/Red Tube</td>
+<td>5-7 Day's</td>
+<td>3500</td>
+</tr>
+
+<tr>
+<td>566</td>
+<td>Drug Screning</td>
+<td>Angiotensin converting Enzyme (ACE)</td>
+<td>Serum/Red Tube</td>
+<td>03 Day's</td>
+<td>3500</td>
+</tr>
+
+<tr>
+<td>567</td>
+<td>Drug Screning</td>
+<td>Anti- Jo1 antibody (JO1)</td>
+<td>Serum/Red Tube</td>
+<td>5-7 Day's</td>
+<td>1800</td>
+</tr>
+
+<tr>
+<td>568</td>
+<td>Drug Screning</td>
+<td>C-Kit Mutation (C-Kit M)</td>
+<td>Serum/Red Tube</td>
+<td>5-7 Day's</td>
+<td>7500</td>
+</tr>
+
+<tr>
+<td>569</td>
+<td>Drug Screning</td>
+<td>C1 Esterase(C-1)</td>
+<td>Serum/Red Tube</td>
+<td>5-7 Day's</td>
+<td>3000</td>
+</tr>
+
+<tr>
+<td>570</td>
+<td>Drug Screning</td>
+<td>CELIAC DISEASE SCREENING PANEL (Celiac)</td>
+<td>Serum/Red Tube</td>
+<td>5-7 Day's</td>
+<td>2300</td>
+</tr>
+
+<tr>
+<td>571</td>
+<td>Drug Screning</td>
+<td>Cross Match Test (T cell & B cell)</td>
+<td>Serum+Whole Blood</td>
+<td>5-7 Day's</td>
+<td>7500</td>
+</tr>
+
+<tr>
+<td>572</td>
+<td>Drug Screning</td>
+<td>Cyclosperine (Cyclosp)</td>
+<td>Serum/Red Tube</td>
+<td>5-7 Day's</td>
+<td>1800</td>
+</tr>
+
+<tr>
+<td>573</td>
+<td>Drug Screning</td>
+<td>ENDOMYSIAL ANTIBODY-IgA (EA-IgA)</td>
+<td>Serum/Red Tube</td>
+<td>5-7 Day's</td>
+<td>3500</td>
+</tr>
+
+<tr>
+<td>574</td>
+<td>Drug Screning</td>
+<td>EPSTEIN BARR VIRUS QUANTITATIVE (EBV)</td>
+<td>Serum/Red Tube</td>
+<td>5-7 Day's</td>
+<td>11800</td>
+</tr>
+
+<tr>
+<td>575</td>
+<td>Drug Screning</td>
+<td>Echinococcus Antibody (Echino-Ab)</td>
+<td>Serum/Red Tube</td>
+<td>5-7 Day's</td>
+<td>1700</td>
+</tr>
+
+<tr>
+<td>576</td>
+<td>Drug Screning</td>
+<td>Fecal Calprotectin (Quantitative - F.calpro)</td>
+<td>Stool</td>
+<td>5-7 Day's</td>
+<td>3500</td>
+</tr>
+
+<tr>
+<td>577</td>
+<td>Drug Screning</td>
+<td>Fructose (Fructo)</td>
+<td>Serum/Seemen</td>
+<td>5-7 Day's</td>
+<td>1500</td>
+</tr>
+
+<tr>
+<td>578</td>
+<td>Drug Screning</td>
+<td>GAMMA CARBOXY PROTHROMBIN (DCP) (PIVKA II)</td>
+<td>Serum/Red Tube</td>
+<td>5-7 Day's</td>
+<td>7000</td>
+</tr>
+
+<tr>
+<td>579</td>
+<td>Drug Screning</td>
+<td>HEPATITIS D VIRUS DETECTION (HDV)</td>
+<td>Whole Blood + Serum</td>
+<td>5-7 Day's</td>
+<td>14000</td>
+</tr>
+
+<tr>
+<td>580</td>
+<td>Drug Screning</td>
+<td>HEPATITIS DELTA ANTIBODY IgM (Anti-HDV IgM)</td>
+<td>Whole Blood + Serum</td>
+<td>5-7 Day's</td>
+<td>5300</td>
+</tr>
+
+<tr>
+<td>581</td>
+<td>Drug Screning</td>
+<td>HIV 1 RNA QUANTITATIVE (HIV-QUANTITATIVE)</td>
+<td>Whole Blood + Serum</td>
+<td>5-7 Day's</td>
+<td>13500</td>
+</tr>
+
+<tr>
+<td>582</td>
+<td>Drug Screning</td>
+<td>HLA Typing - A B DRB1 (HLA Typing)</td>
+<td>Whole Blood/Levender Tube</td>
+<td>5-7 Day's</td>
+<td>18000</td>
+</tr>
+
+<tr>
+<td>583</td>
+<td>Drug Screning</td>
+<td>HLA-B51 (HLA-B51)</td>
+<td>Whole Blood/Levender Tube</td>
+<td>5-7 Day's</td>
+<td>4000</td>
+</tr>
+
+<tr>
+<td>584</td>
+<td>Drug Screning</td>
+<td>Hydroxyindoleacetic acid (5-HIAA)</td>
+<td>Serum/Red Tube</td>
+<td>5-7 Day's</td>
+<td>3900</td>
+</tr>
+
+<tr>
+<td>585</td>
+<td>Drug Screning</td>
+<td>Inhibin-b (inhibin-b)</td>
+<td>Serum/Red Tube</td>
+<td>5-7 Day's</td>
+<td>3700</td>
+</tr>
+
+<tr>
+<td>586</td>
+<td>Drug Screning</td>
+<td>Kappa Free Light Chain (KFLC)</td>
+<td>Serum/Red Tube</td>
+<td>5-7 Day's</td>
+<td>2000</td>
+</tr>
+
+<tr>
+<td>587</td>
+<td>Drug Screning</td>
+<td>Kappa/Lambda FLC Ratio - (FLC Ratio)</td>
+<td>Serum/Red Tube</td>
+<td>5-7 Day's</td>
+<td>4500</td>
+</tr>
+
+<tr>
+<td>588</td>
+<td>Drug Screning</td>
+<td>LIPOPROTEIN -A (Li-A)</td>
+<td>Serum/Red Tube</td>
+<td>5-7 Day's</td>
+<td>2000</td>
+</tr>
+
+<tr>
+<td>589</td>
+<td>Drug Screning</td>
+<td>Lambda Free Light Chain (LFLC)</td>
+<td>Serum/Red Tube</td>
+<td>5-7 Day's</td>
+<td>2000</td>
+</tr>
+
+<tr>
+<td>590</td>
+<td>Drug Screning</td>
+<td>METHYLGUANINE METHYLTRANSFERASE (MGMT)</td>
+<td>Serum/Red Tube</td>
+<td>5-7 Day's</td>
+<td>15800</td>
+</tr>
+
+<tr>
+<td>591</td>
+<td>Drug Screning</td>
+<td>MODIFIED ACID FAST STAIN FOR LEPROSY (MODIFIED ACID)</td>
+<td>Serum/Red Tube</td>
+<td>5-7 Day's</td>
+<td>1250</td>
+</tr>
+
+<tr>
+<td>592</td>
+<td>Drug Screning</td>
+<td>MUMPS VIRUS ANTIBODY IgG (Mumps IgG)</td>
+<td>Serum/Red Tube</td>
+<td>5-7 Day's</td>
+<td>3500</td>
+</tr>
+
+<tr>
+<td>593</td>
+<td>Drug Screning</td>
+<td>MUMPS VIRUS ANTIBODY IgM (Mumps IgM)</td>
+<td>Serum/Red Tube</td>
+<td>5-7 Day's</td>
+<td>3500</td>
+</tr>
+
+<tr>
+<td>594</td>
+<td>Drug Screning</td>
+<td>Methamphetamine (Metha)</td>
+<td>Serum/Red Tube</td>
+<td>5-7 Day's</td>
+<td>500</td>
+</tr>
+
+<tr>
+<td>595</td>
+<td>Drug Screning</td>
+<td>Methotrexate (MTE)</td>
+<td>Serum/Red Tube</td>
+<td>5-7 Day's</td>
+<td>5050</td>
+</tr>
+
+<tr>
+<td>596</td>
+<td>Drug Screning</td>
+<td>MuSK - MUSCLE SPECIFIC KINASE - ANTIBODY (MUSK)</td>
+<td>Serum/Red Tube</td>
+<td>5-7 Day's</td>
+<td>10300</td>
+</tr>
+
+<tr>
+<td>597</td>
+<td>Drug Screning</td>
+<td>OLIGOCLONAL BANDS IgG (OLIGO)</td>
+<td>Serum/Red Tube</td>
+<td>5-7 Day's</td>
+<td>8250</td>
+</tr>
+
+<tr>
+<td>598</td>
+<td>Drug Screning</td>
+<td>PARIETAL CELL ANTIBODY (APCA)</td>
+<td>Serum/Red Tube</td>
+<td>5-7 Day's</td>
+<td>3000</td>
+</tr>
+
+<tr>
+<td>599</td>
+<td>Drug Screning</td>
+<td>PREGNANCY ASSOCIATED PLASMA PROTEIN-A (PAPP-A)</td>
+<td>Serum/Red Tube</td>
+<td>5-7 Day's</td>
+<td>2000</td>
+</tr>
+
+<tr>
+<td>600</td>
+<td>Drug Screning</td>
+<td>SLE Panel (SLE)</td>
+<td>Serum + Plasma</td>
+<td>5-7 Day's</td>
+<td>6500</td>
+</tr>
+
+<tr>
+<td>601</td>
+<td>Drug Screning</td>
+<td>SPERM DNA FRAGMENTATION FLUORESCENT MICROSCOPY (SDFFM)</td>
+<td>Serum/Red Tube</td>
+<td>5-7 Day's</td>
+<td>8500</td>
+</tr>
+
+<tr>
+<td>602</td>
+<td>Drug Screning</td>
+<td>Septin 9 Methylated DNA(SEPT9)</td>
+<td>Serum/Red Tube</td>
+<td>5-7 Day's</td>
+<td>8400</td>
+</tr>
+
+<tr>
+<td>603</td>
+<td>Drug Screning</td>
+<td>Serotonin (Serot)</td>
+<td>Serum/Red Tube</td>
+<td>5-7 Day's</td>
+<td>3800</td>
+</tr>
+
+<tr>
+<td>604</td>
+<td>Drug Screning</td>
+<td>Serum GASTRIN (Gastrin)</td>
+<td>Serum/Red Tube</td>
+<td>5-7 Day's</td>
+<td>2300</td>
+</tr>
+
+<tr>
+<td>605</td>
+<td>Drug Screning</td>
+<td>Short Synacthen test (SST)</td>
+<td>Serum/Red Tube</td>
+<td>5-7 Day's</td>
+<td>3500</td>
+</tr>
+
+<tr>
+<td>606</td>
+<td>Drug Screning</td>
+<td>Urinary Hemosiderin (Hemosiderin)</td>
+<td>Urine</td>
+<td>5-7 Day's</td>
+<td>700</td>
+</tr>
+
+<tr>
+<td>607</td>
+<td>Drug Screning</td>
+<td>Urine For Chyle Examination (Chyle)</td>
+<td>Urine</td>
+<td>5-7 Day's</td>
+<td>1300</td>
+</tr>
+<tr>
+<td>608</td>
+<td>Drug Screning</td>
+<td>Urine For Dysmorphic RBC (Dysmorphic)</td>
+<td>Drug Screning</td>
+<td>5-7 Day's</td>
+<td>650</td>
+</tr>
+
+<tr>
+<td>609</td>
+<td>Drug Screning</td>
+<td>Urine Free Hemoglobin (UFH)</td>
+<td>Drug Screning</td>
+<td>5-7 Day's</td>
+<td>400</td>
+</tr>
+
+<tr>
+<td>610</td>
+<td>Drug Screning</td>
+<td>Vitamin A (Vit-A)</td>
+<td>Drug Screning</td>
+<td>5-7 Day's</td>
+<td></td>
+</tr>
+
+<tr>
+<td>611</td>
+<td>Drug Screning</td>
+<td>Vitamin B1 (Thiamin)</td>
+<td>Drug Screning</td>
+<td>5-7 Day's</td>
+<td></td>
+</tr>
+
+<tr>
+<td>612</td>
+<td>Drug Screning</td>
+<td>Vitamin C (Vit-C)</td>
+<td>Drug Screning</td>
+<td>5-7 Day's</td>
+<td></td>
+</tr>
+
+<tr>
+<td>613</td>
+<td>Drug Screning</td>
+<td>Vitamin E (Vit-E)</td>
+<td>Drug Screning</td>
+<td>5-7 Day's</td>
+<td></td>
+</tr>
+
+<tr>
+<td>614</td>
+<td>Drug Screning</td>
+<td>Vitamin K (Vit-K)</td>
+<td>Drug Screning</td>
+<td>5-7 Day's</td>
+<td></td>
+</tr>
+
+<tr>
+<td>615</td>
+<td>Drug Screning</td>
+<td>Von Willebrand Factor (vWF) Antigen (vWF)</td>
+<td>Drug Screning</td>
+<td>5-7 Day's</td>
+<td>5200</td>
+</tr>
+
+<tr>
+<td>616</td>
+<td>Drug Screning</td>
+<td>Y-CHROMOSOME MICRODELETION DETECTION PCR (Y-CMD)</td>
+<td>Drug Screning</td>
+<td>5-7 Day's</td>
+<td>13500</td>
+</tr>
+
+<tr>
+<td>617</td>
+<td>Drug Screning</td>
+<td>Β2 Glycoprotein (Β2 Gly)</td>
+<td>Drug Screning</td>
+<td>5-7 Day's</td>
+<td>3000</td>
+</tr>
+
+<tr>
+<td>618</td>
+<td>Drug Screning</td>
+<td>GASTRIC CANCER MARKER</td>
+<td>Drug Screning</td>
+<td>5-7 Day's</td>
+<td>3000</td>
+</tr>
+
+<tr>
+<td>619</td>
+<td>Drug Screning</td>
+<td>ALDOSTERONE / PLASMA RENIN DIRECT RATIO</td>
+<td>Drug Screning</td>
+<td>5-7 Day's</td>
+<td>13500</td>
+</tr>
+
+<tr>
+<td>620</td>
+<td>Drug Screning</td>
+<td>HEMOCHROMATOSIS DETECTION HFE GENOTYPING</td>
+<td>Drug Screning</td>
+<td>5-7 Day's</td>
+<td>10000</td>
+</tr>
+
+<tr>
+<td>621</td>
+<td>Drug Screning</td>
+<td>FOLIC ACID-RBC</td>
+<td>Drug Screning</td>
+<td>5-7 Day's</td>
+<td>4300</td>
+</tr>
+
+<tr>
+<td>622</td>
+<td>Drug Screning</td>
+<td>AUTOIMMUNE ENCEPHALITIS PANEL</td>
+<td>Drug Screning</td>
+<td>5-7 Day's</td>
+<td>30000</td>
+</tr>
+
+<tr>
+<td>623</td>
+<td>Drug Screning</td>
+<td>ERYTHROPOIETIN</td>
+<td>Drug Screning</td>
+<td>5-7 Day's</td>
+<td>4500</td>
+</tr>
+
+
+        <!-- Paste all remaining 131 test rows here following the same structure -->
+    </tbody>
+</table>
+
+<script>
+document.getElementById('searchBox').addEventListener('keyup', function() {
+    let filter = this.value.toLowerCase();
+    let rows = document.querySelectorAll('#labTable tbody tr');
+
+    rows.forEach(row => {
+        let text = row.textContent.toLowerCase();
+        row.style.display = text.includes(filter) ? '' : 'none';
+    });
+});
+</script>
+
+<!-- FOOTER -->
+<footer>
+<!-- Developer info -->
+<div class="dev-bar">
+  <strong>App Developer:</strong> MD MAMUN MIAH
+  <span>|</span> Medical Technologist
+  <span>|</span> Mob: <a href="tel:+8801854000045">01854000045</a>
+  <span>|</span> Email: <a href="mailto:md.mamun8@gmail.com">md.mamun8@gmail.com</a>
+</div>
+</footer>
+</body>
+</html>
